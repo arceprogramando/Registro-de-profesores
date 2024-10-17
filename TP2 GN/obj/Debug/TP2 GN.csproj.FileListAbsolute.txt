@@ -33,10 +33,13 @@ C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\TP2 GN.exe
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\TP2 GN.pdb
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.AssemblyReference.cache
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\MainWindow.g.cs
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Registrar.g.cs
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\App.g.cs
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN_MarkupCompile.cache
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN_MarkupCompile.lref
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\MainWindow.baml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Registrar.baml
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.g.resources
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2_GN.Properties.Resources.resources
 C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.GenerateResource.cache

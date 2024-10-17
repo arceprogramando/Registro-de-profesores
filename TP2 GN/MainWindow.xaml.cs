@@ -19,77 +19,11 @@ namespace TP2_GN
 {
     public partial class MainWindow : Window
     {
-        private ProfesorViewModel _viewModel;
 
         public MainWindow()
         {
             InitializeComponent();
-            CargarProvincias();
-            _viewModel = new ProfesorViewModel();
-            DataContext = _viewModel;
         }
 
-        private void txtNombreApellido_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(txtNombreApellido.Text))
-            {
-                txtNombreApellido.BorderBrush = System.Windows.Media.Brushes.Gray;
-            }
-            else
-            {
-                txtNombreApellido.BorderBrush = System.Windows.Media.Brushes.Red;
-            }
-        }
-
-        private void txtDomicilio_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(txtDomicilio.Text))
-            {
-                txtDomicilio.BorderBrush = System.Windows.Media.Brushes.Gray;
-            }
-            else
-            {
-                txtDomicilio.BorderBrush = System.Windows.Media.Brushes.Red;
-            }
-        }
-
-
-        private void Guardar_Click(object sender, RoutedEventArgs e)
-        {
-            _viewModel.AgregarProfesor();
-            MessageBox.Show("Profesor guardado correctamente.");
-        }
-        private void CargarProvincias()
-        {
-            List<string> provincias = new List<string>
-            {
-                "Buenos Aires",
-                "Catamarca",
-                "Chaco",
-                "Chubut",
-                "Córdoba",
-                "Corrientes",
-                "Entre Ríos",
-                "Formoza",
-                "Jujuy",
-                "La Pampa",
-                "La Rioja",
-                "Mendoza",
-                "Misiones",
-                "Neuquen",
-                "Rio Negro",
-                "Salta",
-                "San Juan",
-                "San Luis",
-                "Santa Cruz",
-                "Santa Fe",
-                "Santiago Del Estero",
-                "Tierra Del Fuego",
-                "Tucumán",
-            };
-
-            cbxProvincia.ItemsSource = provincias;
-
-        }
-    }
+      }
 }
