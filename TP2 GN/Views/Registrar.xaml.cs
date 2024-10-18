@@ -28,8 +28,8 @@ namespace TP2_GN.Views
         public Registrar()
         {
             InitializeComponent();
-            _viewModel = new ProfesorViewModel();
             CargarProvincias();
+            _viewModel = new ProfesorViewModel();
             DataContext = _viewModel;
         }
 
@@ -62,6 +62,7 @@ namespace TP2_GN.Views
         private void Guardar_Click(object sender, RoutedEventArgs e)
         {
             _viewModel.AgregarProfesor();
+          
             MessageBox.Show("Profesor guardado correctamente.");
         }
         private void CargarProvincias()
@@ -96,5 +97,10 @@ namespace TP2_GN.Views
             cbxProvincia.ItemsSource = provincias;
 
         }
+
+      
+
+
+
     }
 }

@@ -84,7 +84,7 @@
                 <Label Content="Materia que dicta"/>
                 <TextBox x:Name="txtMateria" Margin="10" HorizontalAlignment="Stretch"/>
 
-                <Label Content="Cantidad de horas (mínimo y máximo)" />
+           <!--     <Label Content="Cantidad de horas (mínimo y máximo)" />
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="txtMinHoras" Width="50" Margin="10,0,0,0" MaxLength="6"/>
                     <TextBox x:Name="txtMaxHoras" Width="50" Margin="10,0,0,0" MaxLength="6"/>
@@ -97,10 +97,20 @@
                     <TextBox x:Name="txtMaxValorHora" Width="50" Margin="10,0,0,0" MaxLength="6"/>
                 </StackPanel>
 
+ -->
 
-                <Label Content="Días que imparte clases"/>
-                <TextBox x:Name="txtDiasClase" Margin="10" HorizontalAlignment="Stretch"/>
+                    <Label Content="Días que imparte clases"/>
+                    <StackPanel x:Name="txtDiasClase" Margin="10">
+                        <CheckBox Content="Lunes" x:Name="lunesCheckbox" />
+                        <CheckBox Content="Martes" x:Name="martesCheckbox"/>
+                        <CheckBox Content="Miércoles" x:Name="miercolesCheckbox"/>
+                        <CheckBox Content="Jueves" x:Name="juevesCheckbox"/>
+                        <CheckBox Content="Viernes" x:Name="viernesCheckbox"/>
+                        <CheckBox Content="Sábado" x:Name="sabadoCheckbox"/>
+                        
+                    </StackPanel>
 
+                
                 <Label Content="Nivel de enseñanza"/>
                 <ComboBox x:Name="cbxNivelEnsenanza" Margin="10" HorizontalAlignment="Stretch">
                     <ComboBoxItem Content="Universitario"/>
