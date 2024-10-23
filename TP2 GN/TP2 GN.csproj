@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="DataBase\DB.cs" />
     <Compile Include="ViewModels\visual.cs" />
     <Compile Include="Views\Registrar.xaml.cs">

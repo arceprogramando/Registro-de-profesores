@@ -17,7 +17,7 @@ namespace TP2_GN.DataBase
 
         public DB()
         {
-            _connection = @"Server=DESKTOP-PRJRN6F\DBSERVER; Database=GrupoN;";
+            _connection = @"Server=DESKTOP-PRJRN6F\DBSERVER; Database=Registro_Profesores;";
         }
 
         internal ObservableCollection<Profesor> Get()
