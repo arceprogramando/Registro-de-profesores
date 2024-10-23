@@ -9,6 +9,8 @@
         Title="Registro de profesores" Height="450" Width="450">
 
     <Grid Background="#6e9aee">
+        
+        
 
         <views:Registrar/>
 
