@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TP2_GN.Models;
+using MySql.Data.MySqlClient;
 
 namespace TP2_GN.DataBase
 {
@@ -17,66 +18,75 @@ namespace TP2_GN.DataBase
 
         public DB()
         {
-            _connection = @"Server=DESKTOP-PRJRN6F\DBSERVER; Database=Registro_Profesores;";
+            _connection = "Server=localhost;Database=registro_profesores;Uid=root;Pwd=root;";
+
         }
 
-        internal ObservableCollection<Profesor> Get()
+        internal ObservableCollection<ProfesorModel> Get()
         {
-            ObservableCollection<Profesor> lastResult = new ObservableCollection<Profesor>();
+            ObservableCollection<ProfesorModel> lastResult = new ObservableCollection<ProfesorModel>();
 
             string query = "SELECT * FROM profesores";
 
-            using (SqlConnection connect = new SqlConnection(Connection))
-            {
-                connect.Open();
-                SqlCommand cmd = new SqlCommand(query, connect);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                using (MySqlConnection connect = new MySqlConnection(Connection))
                 {
-                    lastResult.Add(new Profesor()
+                    connect.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, connect);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
                     {
-                        Id = (int)reader["ID"],
-                        Nombre = (string)reader["NOMBRE"],
-                        Apellido = (string)reader["APELLIDO"],
-                        Materia = (string)reader["MATERIA"]
-                    });
+                        lastResult.Add(new ProfesorModel()
+                        {
+                            Id = (int)reader["ID"],
+                            Nombre = (string)reader["NOMBRE"],
+                            Apellido = (string)reader["APELLIDO"],
+                            Materia = (string)reader["MATERIA"]
+                        });
+                    }
+                    reader.Close();
+                    connect.Close();
                 }
-                reader.Close();
-                connect.Close();
+
+                return lastResult;
             }
 
-            return lastResult;
-
-        }
-
-        internal void Add(Profesor model)
+        internal void Add(ProfesorModel model)
         {
-            string query = "INSERT INTO profesores VALUES(@id, @nombre, @apellido, @materia)";
+            string query = "INSERT INTO profesores (id, nombre, apellido, materia) VALUES(@id, @nombre, @apellido, @materia)";
 
-            using (SqlConnection connect = new SqlConnection(Connection))
+            try
             {
-                connect.Open();
+                using (MySqlConnection connect = new MySqlConnection(Connection))
+                {
+                    connect.Open();
 
-                SqlCommand cmd = new SqlCommand(query, connect);
-                cmd.Parameters.AddWithValue("@id", model.Id);
-                cmd.Parameters.AddWithValue("@nombre", model.Nombre);
-                cmd.Parameters.AddWithValue("@apellido", model.Apellido);
-                cmd.Parameters.AddWithValue("@materia", model.Materia);
+                    using (MySqlCommand cmd = new MySqlCommand(query, connect))
+                    {
+                        cmd.Parameters.AddWithValue("@id", model.Id);
+                        cmd.Parameters.AddWithValue("@nombre", model.Nombre);
+                        cmd.Parameters.AddWithValue("@apellido", model.Apellido);
+                        cmd.Parameters.AddWithValue("@materia", model.Materia);
 
-                cmd.ExecuteNonQuery();
-                connect.Close();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                // Manejar la excepción, por ejemplo, loguear el error o mostrar un mensaje
+                Console.WriteLine($"Error al insertar el profesor: {ex.Message}");
             }
         }
 
-        internal void Delete(Profesor model)
+        internal void Delete(ProfesorModel model)
         {
             string query = "DELETE FROM profesores WHERE id=@id";
 
-            using (SqlConnection connect = new SqlConnection(Connection))
+            using (MySqlConnection connect = new MySqlConnection(Connection))
             {
                 connect.Open();
 
-                SqlCommand cmd = new SqlCommand(query, connect);
+                MySqlCommand cmd = new MySqlCommand(query, connect);
 
                 cmd.Parameters.AddWithValue("@id", model.Id);
                 cmd.ExecuteNonQuery();
@@ -85,16 +95,16 @@ namespace TP2_GN.DataBase
 
         }
 
-        internal void Edit(Profesor model)
+        internal void Edit(ProfesorModel model)
         {
 
             string query = "UPDATE profesores SET nombre=@nombre, apellido=@apellido, materia=@materia WHERE id=@id";
 
-            using (SqlConnection connect = new SqlConnection(Connection))
+            using (MySqlConnection connect = new MySqlConnection(Connection))
             {
                 connect.Open();
 
-                SqlCommand cmd = new SqlCommand(query, connect);
+                MySqlCommand cmd = new MySqlCommand(query, connect);
                 cmd.Parameters.AddWithValue("@id", model.Id);
                 cmd.Parameters.AddWithValue("@nombre", model.Nombre);
                 cmd.Parameters.AddWithValue("@apellido", model.Apellido);

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TP2_GN.ViewModels;
 using TP2_GN.Models;
+using System.Data.SqlClient;
 
 namespace TP2_GN
 {
@@ -23,7 +24,8 @@ namespace TP2_GN
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new ProfesorViewModel();
         }
 
-      }
+    }
 }
