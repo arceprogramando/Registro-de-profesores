@@ -12,7 +12,6 @@ namespace TP2_GN.Models
         private int _id;
         private string _nombre;
         private string _apellido;
-        private string _materia;
         private string _domicilio;
         private string _localidad;
         private string _provincia;
@@ -20,11 +19,12 @@ namespace TP2_GN.Models
         private string _email;
         private string _categoria;
         private string _posicion;
+        private string _nivelEnsenanza;
+        private string _materia;
         private List<string> _diasClase;
+        private List<string> _turnos;
         private int _cantidadHoras;
         private decimal _valorHoraCatedra;
-        private string _nivelEnsenanza;
-        private List<string> _turnos;
 
         public int Id
         {
@@ -235,14 +235,14 @@ namespace TP2_GN.Models
             DiasClase = new List<string>(); // Inicializa la lista
         }
 
-        public ProfesorModel(int id, string nombre, string apellido, string materia, string domicilio, string localidad, string provincia,
-                        string nroCelular, string email, string categoria, string posicion, List<string> diasClase, int cantidadHoras,
-                        decimal valorHoraCatedra, string nivelEnsenanza, List<string> turnos) : this()
+        public ProfesorModel(int id, string nombre, string apellido, string domicilio, string localidad, string provincia,
+                        string nroCelular, string email, string categoria, string posicion, string nivelEnsenanza, 
+                        string materia, List<string> diasClase, List<string> turnos, 
+                        int cantidadHoras, decimal valorHoraCatedra) : this()
         {
             Id = id;
             Nombre = nombre;
             Apellido = apellido;
-            Materia = materia;
             Domicilio = domicilio;
             Localidad = localidad;
             Provincia = provincia;
@@ -250,11 +250,12 @@ namespace TP2_GN.Models
             Email = email;
             Categoria = categoria;
             Posicion = posicion;
+            NivelEnsenanza = nivelEnsenanza;
+            Materia = materia;
             DiasClase = diasClase;
+            Turnos = turnos;
             CantidadHoras = cantidadHoras;
             ValorHoraCatedra = valorHoraCatedra;
-            NivelEnsenanza = nivelEnsenanza;
-            Turnos = turnos;
         }
 
         public override string ToString()

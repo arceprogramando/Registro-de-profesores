@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:TP2_GN"
         xmlns:views="clr-namespace:TP2_GN.Views"
         mc:Ignorable="d"
-        Title="Registro de profesores" Height="450" Width="450">
+        Title="Registro de profesores" Height="700" Width="1300" >
 
-    <Grid Background="#6e9aee">
-        
-        
+    <Grid Background="#6e9aee" >
+
+
 
         <views:Registrar/>
 

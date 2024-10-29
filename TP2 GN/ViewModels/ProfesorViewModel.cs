@@ -15,6 +15,7 @@ namespace TP2_GN.ViewModels
 
         private readonly DB dataBase;
         private ObservableCollection<ProfesorModel> _profesores;
+        private ObservableCollection<string> _provincias;
         private ProfesorModel _profesor;
 
         // Comandos para agregar, eliminar y actualizar profesores
@@ -64,11 +65,11 @@ namespace TP2_GN.ViewModels
         // Método para agregar un nuevo profesor
         private void Agregar(object profesor)
         {
-            if (Profesor != null && IsValidProfesor(Profesor)) // Validación adicional
+            if (IsValidProfesor(Profesor))
             {
                 try
                 {
-                    dataBase.Add(Profesor); // Agrega a la base de datos
+                    dataBase.Add(Profesor); // Agrega el objeto a la base de datos
                     Profesores.Add(Profesor); // Agrega a la lista en memoria
                     Profesor = new ProfesorModel(); // Resetea el profesor seleccionado
                     MessageBox.Show("Profesor guardado correctamente");
@@ -80,19 +81,32 @@ namespace TP2_GN.ViewModels
             }
             else
             {
-                MessageBox.Show("Error: El profesor no es válido");
+                MessageBox.Show("Error: No se pudo guardar");
             }
         }
 
-        // Método de validación adicional
+        // Método de validación personalizado
         private bool IsValidProfesor(ProfesorModel profesor)
         {
-            // Reglas de validación
+            // Primero verifica que el objeto profesor no sea null
+            if (profesor == null) return false;
+
+            // Despues verifica que las propiedades obligatorias no sean nulas o vacías
             if (string.IsNullOrWhiteSpace(profesor.Nombre))
+            {
+                MessageBox.Show("El campo 'Nombre' es obligatorio.");
                 return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(profesor.Apellido))
+            {
+                MessageBox.Show("El campo 'Apellido' es obligatorio.");
+                return false;
+            }
 
             return true;
         }
+
 
         public string Nombre
         {
@@ -148,7 +162,18 @@ namespace TP2_GN.ViewModels
             }
         }
 
-
+        public string Provincia
+        {
+            get => Profesor.Provincia;
+            set
+            {
+                if (Profesor.Provincia != value)
+                {
+                    Profesor.Provincia = value;
+                    OnPropertyChanged(nameof(Provincia));
+                }
+            }
+        }
 
         public string NroCelular
         {
@@ -252,29 +277,6 @@ namespace TP2_GN.ViewModels
                 }
             }
         }
-
-
-        // Método para eliminar el profesor seleccionado
-        private void Eliminar()
-        {
-            dataBase.Delete(Profesor);
-            Profesores.Remove(Profesor); // Remueve de la colección
-            Profesor = new ProfesorModel(); // Resetea la selección
-        }
-
-        // Método para actualizar la información de un profesor
-        private void ActualizarProfesor()
-        {
-            dataBase.Edit(Profesor);
-            Profesores = dataBase.Get(); // Refresca la lista
-            OnPropertyChanged(nameof(Profesores)); // Notifica el cambio
-        }
-
-        // Validación de eliminación y actualización
-        private bool CanEliminarProfesor() => Profesor != null && Profesor.Id > 0;
-        private bool CanActualizarProfesor() => Profesor != null && Profesor.Id > 0;
-
-        private ObservableCollection<string> _provincias;
         public ObservableCollection<string> Provincias
         {
             get => _provincias;
@@ -285,36 +287,34 @@ namespace TP2_GN.ViewModels
             }
         }
 
-
         private void CargarProvincias()
         {
             Provincias = new ObservableCollection<string>
-        {
-            "Buenos Aires",
-            "Catamarca",
-            "Chaco",
-            "Chubut",
-            "Córdoba",
-            "Corrientes",
-            "Entre Ríos",
-            "Formosa",
-            "Jujuy",
-            "La Pampa",
-            "La Rioja",
-            "Mendoza",
-            "Misiones",
-            "Neuquén",
-            "Río Negro",
-            "Salta",
-            "San Juan",
-            "San Luis",
-            "Santa Cruz",
-            "Santa Fe",
-            "Santiago Del Estero",
-            "Tierra Del Fuego",
-            "Tucumán",
-        };
-
+            {
+                "Buenos Aires",
+                "Catamarca",
+                "Chaco",
+                "Chubut",
+                "Córdoba",
+                "Corrientes",
+                "Entre Ríos",
+                "Formosa",
+                "Jujuy",
+                "La Pampa",
+                "La Rioja",
+                "Mendoza",
+                "Misiones",
+                "Neuquén",
+                "Río Negro",
+                "Salta",
+                "San Juan",
+                "San Luis",
+                "Santa Cruz",
+                "Santa Fe",
+                "Santiago Del Estero",
+                "Tierra Del Fuego",
+                "Tucumán",
+            };
         }
 
         // Propiedades booleanas para el checkbox de días laborales
@@ -418,6 +418,26 @@ namespace TP2_GN.ViewModels
             }
         }
 
+
+        // Método para eliminar el profesor seleccionado
+        private void Eliminar()
+        {
+            dataBase.Delete(Profesor);
+            Profesores.Remove(Profesor); // Remueve de la colección
+            Profesor = new ProfesorModel(); // Resetea la selección
+        }
+
+        // Método para actualizar la información de un profesor
+        private void Actualizar()
+        {
+            dataBase.Edit(Profesor);
+            Profesores = dataBase.Get(); // Refresca la lista
+            OnPropertyChanged(nameof(Profesores)); // Notifica el cambio
+        }
+
+        // Validación de eliminación y actualización
+        private bool CanEliminarProfesor() => Profesor != null && Profesor.Id > 0;
+        private bool CanActualizarProfesor() => Profesor != null && Profesor.Id > 0;
 
 
     }

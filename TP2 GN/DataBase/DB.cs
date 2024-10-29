@@ -35,13 +35,14 @@ namespace TP2_GN.DataBase
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        lastResult.Add(new ProfesorModel()
-                        {
-                            Id = (int)reader["ID"],
-                            Nombre = (string)reader["NOMBRE"],
-                            Apellido = (string)reader["APELLIDO"],
-                            Materia = (string)reader["MATERIA"]
-                        });
+                    lastResult.Add(new ProfesorModel()
+                    {
+                        Id = (int)reader["ID"],
+                        Nombre = (string)reader["NOMBRE"],
+                        Apellido = (string)reader["APELLIDO"],
+                        
+                        
+                    });
                     }
                     reader.Close();
                     connect.Close();
@@ -49,6 +50,7 @@ namespace TP2_GN.DataBase
 
                 return lastResult;
             }
+
 
         internal void Add(ProfesorModel model)
         {
@@ -58,7 +60,6 @@ namespace TP2_GN.DataBase
             {
                 using (MySqlConnection connect = new MySqlConnection(Connection))
                 {
-                    connect.Open();
 
                     using (MySqlCommand cmd = new MySqlCommand(query, connect))
                     {
@@ -67,6 +68,7 @@ namespace TP2_GN.DataBase
                         cmd.Parameters.AddWithValue("@apellido", model.Apellido);
                         cmd.Parameters.AddWithValue("@materia", model.Materia);
 
+                        connect.Open();
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -80,7 +82,7 @@ namespace TP2_GN.DataBase
 
         internal void Delete(ProfesorModel model)
         {
-            string query = "DELETE FROM profesores WHERE id=@id";
+            string query = "DELETE FROM profesores WHERE id=@Id";
 
             using (MySqlConnection connect = new MySqlConnection(Connection))
             {
@@ -88,7 +90,7 @@ namespace TP2_GN.DataBase
 
                 MySqlCommand cmd = new MySqlCommand(query, connect);
 
-                cmd.Parameters.AddWithValue("@id", model.Id);
+                cmd.Parameters.AddWithValue("@Id", model.Id);
                 cmd.ExecuteNonQuery();
                 connect.Close();
             }
@@ -98,17 +100,17 @@ namespace TP2_GN.DataBase
         internal void Edit(ProfesorModel model)
         {
 
-            string query = "UPDATE profesores SET nombre=@nombre, apellido=@apellido, materia=@materia WHERE id=@id";
+            string query = "UPDATE profesores SET nombre=@Nombre, apellido=@Apellido, materia=@Materia WHERE id=@Id";
 
             using (MySqlConnection connect = new MySqlConnection(Connection))
             {
                 connect.Open();
 
                 MySqlCommand cmd = new MySqlCommand(query, connect);
-                cmd.Parameters.AddWithValue("@id", model.Id);
-                cmd.Parameters.AddWithValue("@nombre", model.Nombre);
-                cmd.Parameters.AddWithValue("@apellido", model.Apellido);
-                cmd.Parameters.AddWithValue("@materia", model.Materia);
+                cmd.Parameters.AddWithValue("@Id", model.Id);
+                cmd.Parameters.AddWithValue("@Nombre", model.Nombre);
+                cmd.Parameters.AddWithValue("@Apellido", model.Apellido);
+                cmd.Parameters.AddWithValue("@Materia", model.Materia);
 
                 cmd.ExecuteNonQuery();
                 connect.Close();
