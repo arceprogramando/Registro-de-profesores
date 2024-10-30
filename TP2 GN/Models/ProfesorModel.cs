@@ -18,7 +18,6 @@ namespace TP2_GN.Models
         private string _nroCelular;
         private string _email;
         private string _categoria;
-        private string _posicion;
         private string _nivelEnsenanza;
         private string _materia;
         private List<string> _diasClase;
@@ -43,9 +42,7 @@ namespace TP2_GN.Models
             {
                 if (!string.IsNullOrWhiteSpace(value))
                     _nombre = value;
-                else
-                    throw new ArgumentException("El nombre no puede estar vacío.");
-                OnPropertyChanged(nameof(Nombre));
+                    OnPropertyChanged(nameof(Nombre));
             }
         }
 
@@ -56,22 +53,7 @@ namespace TP2_GN.Models
             {
                 if (!string.IsNullOrWhiteSpace(value))
                     _apellido = value;
-                else
-                    throw new ArgumentException("El apellido no puede estar vacío.");
-                OnPropertyChanged(nameof(Apellido));
-            }
-        }
-
-        public string Materia
-        {
-            get => _materia;
-            set
-            {
-                if (!string.IsNullOrWhiteSpace(value))
-                    _materia = value;
-                else
-                    throw new ArgumentException("La materia no puede estar vacía.");
-                OnPropertyChanged(nameof(Materia));
+                    OnPropertyChanged(nameof(Apellido));
             }
         }
 
@@ -83,7 +65,7 @@ namespace TP2_GN.Models
                 if (!string.IsNullOrWhiteSpace(value))
                     _domicilio = value;
                 else
-                    throw new ArgumentException("El domicilio no puede estar vacío.");
+                    _domicilio = string.Empty;
                 OnPropertyChanged(nameof(Domicilio));
             }
         }
@@ -96,7 +78,7 @@ namespace TP2_GN.Models
                 if (!string.IsNullOrWhiteSpace(value))
                     _localidad = value;
                 else
-                    throw new ArgumentException("La localidad no puede estar vacía.");
+                    _localidad = string.Empty;
                 OnPropertyChanged(nameof(Localidad));
             }
         }
@@ -109,7 +91,7 @@ namespace TP2_GN.Models
                 if (!string.IsNullOrWhiteSpace(value))
                     _provincia = value;
                 else
-                    throw new ArgumentException("La provincia no puede estar vacía.");
+                    _provincia = string.Empty;
                 OnPropertyChanged(nameof(Provincia));
             }
         }
@@ -122,7 +104,7 @@ namespace TP2_GN.Models
                 if (!string.IsNullOrWhiteSpace(value))
                     _nroCelular = value;
                 else
-                    throw new ArgumentException("El número de celular no puede estar vacío.");
+                    _nroCelular = string.Empty;
                 OnPropertyChanged(nameof(NroCelular));
             }
         }
@@ -132,7 +114,8 @@ namespace TP2_GN.Models
             set {
                 if (!string.IsNullOrWhiteSpace(value))
                     _email = value;
-                else throw new ArgumentException("Esnecesario indicar un correo electrónico.");
+                else
+                    _email = string.Empty;
                 OnPropertyChanged(nameof(Email));
             }
         }
@@ -145,24 +128,35 @@ namespace TP2_GN.Models
                 if (!string.IsNullOrWhiteSpace(value))
                     _categoria = value;
                 else
-                    throw new ArgumentException("La categoría no puede estar vacía.");
+                    _categoria = string.Empty;  
                 OnPropertyChanged(nameof(Categoria));
             }
         }
 
-        public string Posicion
+        public string NivelEnsenanza
         {
-            get => _posicion;
+            get => _nivelEnsenanza;
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
-                    _posicion = value;
+                    _nivelEnsenanza = value;
                 else
-                    throw new ArgumentException("La posición no puede estar vacía.");
-                OnPropertyChanged(nameof(Posicion));
+                    _nivelEnsenanza = string.Empty;
+                OnPropertyChanged(nameof(NivelEnsenanza));
             }
         }
-
+        public string Materia
+        {
+            get => _materia;
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                    _materia = value;
+                else
+                    _materia = string.Empty;
+                OnPropertyChanged(nameof(Materia));
+            }
+        }
         public List<string> DiasClase
         {
             get => _diasClase;
@@ -170,6 +164,16 @@ namespace TP2_GN.Models
             {
                 _diasClase = value; // Asigna directamente, permitiendo que pueda ser nulo o vacío
                 OnPropertyChanged(nameof(DiasClase)); // Notifica el cambio siempre que se establezca un nuevo valor
+            }
+
+        }
+        public List<string> Turnos
+        {
+            get => _turnos;
+            set
+            {
+                _turnos = value;
+                OnPropertyChanged(nameof(Turnos));
             }
         }
 
@@ -199,44 +203,32 @@ namespace TP2_GN.Models
             }
         }
 
-        public string NivelEnsenanza
-        {
-            get => _nivelEnsenanza;
-            set
-            {
-                if (!string.IsNullOrWhiteSpace(value))
-                    _nivelEnsenanza = value;
-                else
-                    throw new ArgumentException("El nivel de enseñanza no puede estar vacío.");
-                OnPropertyChanged(nameof(NivelEnsenanza));
-            }
-        }
-
-        public List<string> Turnos
-        {
-            get => _turnos;
-            set
-            {
-                _turnos = value;
-                OnPropertyChanged(nameof(Turnos));
-            }
-        }
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
         // Constructor opcional
         public ProfesorModel()
         {
             DiasClase = new List<string>(); // Inicializa la lista
+            Turnos = new List<string>();
         }
 
+        public bool DiasClaseLunes { get; set; }
+        public bool DiasClaseMartes { get; set; }
+        public bool DiasClaseMiercoles { get; set; }
+        public bool DiasClaseJueves { get; set; }
+        public bool DiasClaseViernes { get; set; }
+        public bool DiasClaseSabado { get; set; }
+
+        public bool TurnoManana { get; set; }
+        public bool TurnoTarde { get; set; }
+        public bool TurnoNoche { get; set; }
+
         public ProfesorModel(int id, string nombre, string apellido, string domicilio, string localidad, string provincia,
-                        string nroCelular, string email, string categoria, string posicion, string nivelEnsenanza, 
+                        string nroCelular, string email, string categoria, string nivelEnsenanza, 
                         string materia, List<string> diasClase, List<string> turnos, 
                         int cantidadHoras, decimal valorHoraCatedra) : this()
         {
@@ -249,7 +241,6 @@ namespace TP2_GN.Models
             NroCelular = nroCelular;
             Email = email;
             Categoria = categoria;
-            Posicion = posicion;
             NivelEnsenanza = nivelEnsenanza;
             Materia = materia;
             DiasClase = diasClase;

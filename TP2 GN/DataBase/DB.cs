@@ -37,11 +37,21 @@ namespace TP2_GN.DataBase
                     {
                     lastResult.Add(new ProfesorModel()
                     {
-                        Id = (int)reader["ID"],
-                        Nombre = (string)reader["NOMBRE"],
-                        Apellido = (string)reader["APELLIDO"],
-                        
-                        
+                        Id = reader["ID"] != DBNull.Value ? (int)reader["ID"] : 0,
+                        Nombre = reader["NOMBRE"] != DBNull.Value ? (string)reader["NOMBRE"] : string.Empty,
+                        Apellido = reader["APELLIDO"] != DBNull.Value ? (string)reader["APELLIDO"] : string.Empty,
+                        Domicilio = reader["DOMICILIO"] != DBNull.Value ? (string)reader["DOMICILIO"] : string.Empty,
+                        Localidad = reader["LOCALIDAD"] != DBNull.Value ? (string)reader["LOCALIDAD"] : string.Empty,
+                        Provincia = reader["PROVINCIA"] != DBNull.Value ? (string)reader["PROVINCIA"] : string.Empty,
+                        NroCelular = reader["NRO_CONTACTO"] != DBNull.Value ? (string)reader["NRO_CONTACTO"] : string.Empty,
+                        Email = reader["EMAIL"] != DBNull.Value ? (string)reader["EMAIL"] : string.Empty,
+                        Categoria = reader["CATEGORIA"] != DBNull.Value ? (string)reader["CATEGORIA"] : string.Empty,
+                        NivelEnsenanza = reader["NIVEL_ENSENANZA"] != DBNull.Value ? (string)reader["NIVEL_ENSENANZA"] : string.Empty,
+                        Materia = reader["MATERIA"] != DBNull.Value ? (string)reader["MATERIA"] : string.Empty,
+                        DiasClase = reader["DIAS_CLASES"] != DBNull.Value ? ((string)reader["DIAS_CLASES"]).Split(',').ToList() : new List<string>(),
+                        Turnos = reader["TURNOS"] != DBNull.Value ? ((string)reader["TURNOS"]).Split(',').ToList() : new List<string>()
+
+
                     });
                     }
                     reader.Close();
@@ -54,7 +64,10 @@ namespace TP2_GN.DataBase
 
         internal void Add(ProfesorModel model)
         {
-            string query = "INSERT INTO profesores (id, nombre, apellido, materia) VALUES(@id, @nombre, @apellido, @materia)";
+            string query = "INSERT INTO profesores (nombre, apellido, domicilio, localidad, provincia, nro_contacto, email," +
+                    "categoria, nivel_ensenanza, materia, dias_clases, turnos) VALUES(@Nombre, @Apellido, @Domicilio," +
+                    "@Localidad, @Provincia, @Nro_contacto, @Email, @Categoria, @Nivel_ensenanza, @Materia, " +
+                    "@Dias_clases, @Turnos)";
 
             try
             {
@@ -63,10 +76,18 @@ namespace TP2_GN.DataBase
 
                     using (MySqlCommand cmd = new MySqlCommand(query, connect))
                     {
-                        cmd.Parameters.AddWithValue("@id", model.Id);
-                        cmd.Parameters.AddWithValue("@nombre", model.Nombre);
-                        cmd.Parameters.AddWithValue("@apellido", model.Apellido);
-                        cmd.Parameters.AddWithValue("@materia", model.Materia);
+                        cmd.Parameters.AddWithValue("@Nombre", model.Nombre);
+                        cmd.Parameters.AddWithValue("@Apellido", model.Apellido);
+                        cmd.Parameters.AddWithValue("@Domicilio", model.Domicilio ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Localidad", model.Localidad ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Provincia", model.Provincia ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Nro_contacto", model.NroCelular ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Email", model.Email ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Categoria", model.Categoria ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Nivel_ensenanza", model.NivelEnsenanza ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Materia", model.Materia ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Dias_clases", string.Join(",", model.DiasClase));
+                        cmd.Parameters.AddWithValue("@Turnos", string.Join(",", model.Turnos));
 
                         connect.Open();
                         cmd.ExecuteNonQuery();

@@ -21,13 +21,11 @@ namespace TP2_GN.Views
 
     {
 
-        private ProfesorViewModel _viewModel;
 
         public Registrar()
         {
             InitializeComponent();
-            _viewModel = new ProfesorViewModel();
-            DataContext = _viewModel;
+            DataContext = new ProfesorViewModel();
         }
 
     }

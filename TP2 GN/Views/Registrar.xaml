@@ -53,61 +53,43 @@
                 <StackPanel>
                     <Label Content="Nombre/s"/>
                     <TextBox x:Name="txtNombre" Margin="10" HorizontalAlignment="Stretch" MaxLength="50" 
-                             Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}" />
+                             Text="{Binding Profesor.Nombre, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Label Content="Apellido"/>
                     <TextBox x:Name="txtApellido" Margin="10" HorizontalAlignment="Stretch" MaxLength="50" 
-                             Text="{Binding Apellido, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding Profesor.Apellido, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <Label Content="Domicilio"/>
                     <TextBox x:Name="txtDomicilio" Margin="10" HorizontalAlignment="Stretch" MaxLength="40" 
-                             Text="{Binding Domicilio, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding Profesor.Domicilio, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <Label Content="Localidad"/>
                     <TextBox x:Name="txtLocalidad" Margin="10" HorizontalAlignment="Stretch" MaxLength="30" 
-                             Text="{Binding Localidad, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding Profesor.Localidad, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <Label Content="Provincia"/>
                     <ComboBox x:Name="cbxProvincia" Margin="10" HorizontalAlignment="Stretch" ItemsSource="{Binding Provincias}"
-                                       SelectedItem="{Binding Provincia, UpdateSourceTrigger=PropertyChanged}" />
+                                       SelectedItem="{Binding Profesor.Provincia, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Label Content="Nro. de celular"/>
                     <TextBox x:Name="txtCelular" Margin="10" HorizontalAlignment="Stretch" MaxLength="50" 
-                             Text="{Binding NroCelular, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding Profesor.NroCelular, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <Label Content="Correo Electrónico"/>
                     <TextBox x:Name="txtEmail" Margin="10" HorizontalAlignment="Stretch" MaxLength="50" 
-                             Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding Profesor.Email, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <Label Content="Categoría"/>
                     <ComboBox x:Name="cbxCategoria" Margin="10" HorizontalAlignment="Stretch" 
-                              SelectedItem="{Binding Categoria, UpdateSourceTrigger=PropertyChanged}">
-                        <ComboBoxItem Content="Profesor"/>
-                        <ComboBoxItem Content="Ayudante"/>
-                        <ComboBoxItem Content="Jefe de Trabajos Prácticos"/>
-                        <ComboBoxItem Content="Investigador"/>
-                        <ComboBoxItem Content="Invitado"/>
-                        <ComboBoxItem Content="Asistente de Cátedra"/>
-                        <ComboBoxItem Content="Tutor"/>
-                        <ComboBoxItem Content="Coordinador Académico"/>
-                    </ComboBox>
-
-                    <Label Content="Posición"/>
-                    <ComboBox x:Name="cbxPosicion" Margin="10" HorizontalAlignment="Stretch" 
-                              SelectedItem="{Binding Posicion, UpdateSourceTrigger=PropertyChanged}">
-                        <ComboBoxItem Content="Titular"/>
-                        <ComboBoxItem Content="Interino"/>
-                        <ComboBoxItem Content="Suplente"/>
-                        <ComboBoxItem Content="Visitante"/>
-                    </ComboBox>
+                              ItemsSource="{Binding Categorias}" SelectedItem="{Binding Profesor.Categoria, Mode=TwoWay}" />
 
                     <Label Content="Materia que dicta"/>
                     <TextBox x:Name="txtMateria" Margin="10" HorizontalAlignment="Stretch" 
-                             Text="{Binding Materia, UpdateSourceTrigger=PropertyChanged}"/>
+                             Text="{Binding Profesor.Materia, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <Label Content="Nivel de enseñanza"/>
                     <ComboBox x:Name="cbxNivelEnsenanza" Margin="10" HorizontalAlignment="Stretch" 
-                              SelectedItem="{Binding NivelEnsenanza, UpdateSourceTrigger=PropertyChanged}">
+                              SelectedItem="{Binding Profesor.NivelEnsenanza, UpdateSourceTrigger=PropertyChanged}">
                         <ComboBoxItem Content="Universitario"/>
                         <ComboBoxItem Content="Secundario"/>
                         <ComboBoxItem Content="Primario"/>
@@ -116,28 +98,22 @@
 
                     <Label Content="Días que imparte clases"/>
                     <StackPanel x:Name="txtDiasClase" Margin="10">
-                        <CheckBox Content="Lunes" x:Name="lunesCheckbox" 
-                                  IsChecked="{Binding DiasClaseLunes, UpdateSourceTrigger=PropertyChanged}"/>
-                        <CheckBox Content="Martes" x:Name="martesCheckbox" 
-                                  IsChecked="{Binding DiasClaseMartes, UpdateSourceTrigger=PropertyChanged}"/>
-                        <CheckBox Content="Miércoles" x:Name="miercolesCheckbox" 
-                                  IsChecked="{Binding DiasClaseMiercoles, UpdateSourceTrigger=PropertyChanged}"/>
-                        <CheckBox Content="Jueves" x:Name="juevesCheckbox" 
-                                  IsChecked="{Binding DiasClaseJueves, UpdateSourceTrigger=PropertyChanged}"/>
-                        <CheckBox Content="Viernes" x:Name="viernesCheckbox" 
-                                  IsChecked="{Binding DiasClaseViernes, UpdateSourceTrigger=PropertyChanged}"/>
-                        <CheckBox Content="Sábado" x:Name="sabadoCheckbox" 
-                                  IsChecked="{Binding DiasClaseSabado, UpdateSourceTrigger=PropertyChanged}"/>
+                        <CheckBox Name="lunesCheckbox" IsChecked="{Binding Profesor.DiasClaseLunes, Mode=TwoWay}" Content="Lunes" />
+                        <CheckBox Name="martesCheckbox" IsChecked="{Binding Profesor.DiasClaseMartes, Mode=TwoWay}" Content="Martes" />
+                        <CheckBox Name="miercolesCheckbox" IsChecked="{Binding Profesor.DiasClaseMiercoles, Mode=TwoWay}" Content="Miércoles" />
+                        <CheckBox Name="juevesCheckbox" IsChecked="{Binding Profesor.DiasClaseJueves, Mode=TwoWay}" Content="Jueves" />
+                        <CheckBox Name="viernesCheckbox" IsChecked="{Binding Profesor.DiasClaseViernes, Mode=TwoWay}" Content="Viernes" />
+                        <CheckBox Name="sabadoCheckbox" IsChecked="{Binding Profesor.DiasClaseSabado, Mode=TwoWay}" Content="Sábado" />
                     </StackPanel>
 
                     <Label Content="Turno"/>
                     <StackPanel x:Name="txtTurnos" Margin="10">
                         <CheckBox Content="Mañana" x:Name="mananaCheckbox" 
-                                  IsChecked="{Binding TurnoManana, UpdateSourceTrigger=PropertyChanged}"/>
+                                  IsChecked="{Binding Profesor.TurnoManana, UpdateSourceTrigger=PropertyChanged}"/>
                         <CheckBox Content="Tarde" x:Name="tardeCheckbox" 
-                                  IsChecked="{Binding TurnoTarde, UpdateSourceTrigger=PropertyChanged}"/>
+                                  IsChecked="{Binding Profesor.TurnoTarde, UpdateSourceTrigger=PropertyChanged}"/>
                         <CheckBox Content="Noche" x:Name="nocheCheckbox" 
-                                  IsChecked="{Binding TurnoNoche, UpdateSourceTrigger=PropertyChanged}"/>
+                                  IsChecked="{Binding Profesor.TurnoNoche, UpdateSourceTrigger=PropertyChanged}"/>
                     </StackPanel>
                     
                     

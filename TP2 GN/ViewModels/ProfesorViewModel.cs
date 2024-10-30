@@ -16,22 +16,29 @@ namespace TP2_GN.ViewModels
         private readonly DB dataBase;
         private ObservableCollection<ProfesorModel> _profesores;
         private ObservableCollection<string> _provincias;
+        private ObservableCollection<string> _categorias;
         private ProfesorModel _profesor;
 
         // Comandos para agregar, eliminar y actualizar profesores
         public ICommand AgregarCommand { get; }
+        public ICommand LimpiarCommand { get; }
         public ICommand EliminarCommand { get; }
         public ICommand ActualizarCommand { get; }
 
 
         public ProfesorViewModel()
         {
+
+            // Instancias necesarias
             dataBase = new DB();
             AgregarCommand = new RelayCommand(Agregar);
             _profesor = new ProfesorModel();
             _profesores = dataBase.Get();
+
+            // Cargo mis métodos para bindings
             CargarProvincias();
-            
+            CargarCategorias();
+
         }
 
         public ProfesorModel Profesor
@@ -39,11 +46,8 @@ namespace TP2_GN.ViewModels
             get => _profesor;
             set
             {
-                if (_profesor != value)
-                {
-                    _profesor = value;
-                    OnPropertyChanged(nameof(Profesor));
-                }
+                _profesor = value;
+                OnPropertyChanged(nameof(Profesor));
             }
 
         }
@@ -71,8 +75,11 @@ namespace TP2_GN.ViewModels
                 {
                     dataBase.Add(Profesor); // Agrega el objeto a la base de datos
                     Profesores.Add(Profesor); // Agrega a la lista en memoria
-                    Profesor = new ProfesorModel(); // Resetea el profesor seleccionado
+
                     MessageBox.Show("Profesor guardado correctamente");
+
+                    Profesor = new ProfesorModel(); // Resetea el profesor seleccionado
+
                 }
                 catch (Exception ex) // Manejo de excepciones
                 {
@@ -84,6 +91,7 @@ namespace TP2_GN.ViewModels
                 MessageBox.Show("Error: No se pudo guardar");
             }
         }
+
 
         // Método de validación personalizado
         private bool IsValidProfesor(ProfesorModel profesor)
@@ -201,31 +209,6 @@ namespace TP2_GN.ViewModels
             }
         }
 
-        public string Categoria
-        {
-            get => Profesor.Categoria;
-            set
-            {
-                if (Profesor.Categoria != value)
-                {
-                    Profesor.Categoria = value;
-                    OnPropertyChanged(nameof(Categoria));
-                }
-            }
-        }
-
-        public string Posicion
-        {
-            get => Profesor.Posicion;
-            set
-            {
-                if (Profesor.Posicion != value)
-                {
-                    Profesor.Posicion = value;
-                    OnPropertyChanged(nameof(Posicion));
-                }
-            }
-        }
         public string NivelEnsenanza
         {
             get => Profesor.NivelEnsenanza;
@@ -277,6 +260,8 @@ namespace TP2_GN.ViewModels
                 }
             }
         }
+
+        // Métodos para bindings
         public ObservableCollection<string> Provincias
         {
             get => _provincias;
@@ -313,7 +298,32 @@ namespace TP2_GN.ViewModels
                 "Santa Fe",
                 "Santiago Del Estero",
                 "Tierra Del Fuego",
-                "Tucumán",
+                "Tucumán"
+            };
+        }
+
+        public ObservableCollection<string> Categorias
+        {
+            get => _categorias;
+            set
+            {
+                _categorias = value;
+                OnPropertyChanged(nameof(Categorias));
+            }
+        }
+
+        private void CargarCategorias()
+        {
+            Categorias = new ObservableCollection<string>
+            {
+                "Profesor",
+                "Ayudante",
+                "Jefe de Trabajos Prácticos",
+                "Investigador",
+                "Invitado",
+                "Asistente de Cátedra",
+                "Tutor",
+                "Coordinador Académico"
             };
         }
 
