@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
+using System.Security.Cryptography;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using TP2_GN.Commands;
 using TP2_GN.DataBase;
 using TP2_GN.Models;
+using TP2_GN.Utilities;
 
 namespace TP2_GN.ViewModels
 {
@@ -17,14 +21,17 @@ namespace TP2_GN.ViewModels
         private ObservableCollection<ProfesorModel> _profesores;
         private ObservableCollection<string> _provincias;
         private ObservableCollection<string> _categorias;
+        private ObservableCollection<string> _nivelesEnsenanza;
         private ProfesorModel _profesor;
+        public List<DiasSemanaEnum> DiasSemanaList { get; } = Enum.GetValues(typeof(DiasSemanaEnum)).Cast<DiasSemanaEnum>().ToList();
+        public List<TurnosEnum> TurnosList { get; } = Enum.GetValues(typeof(TurnosEnum)).Cast<TurnosEnum>().ToList();
 
         // Comandos para agregar, eliminar y actualizar profesores
         public ICommand AgregarCommand { get; }
         public ICommand LimpiarCommand { get; }
         public ICommand EliminarCommand { get; }
         public ICommand ActualizarCommand { get; }
-
+        public ICommand ToggleSeleccionCommand { get; }
 
         public ProfesorViewModel()
         {
@@ -38,7 +45,7 @@ namespace TP2_GN.ViewModels
             // Cargo mis métodos para bindings
             CargarProvincias();
             CargarCategorias();
-
+            CargarNivelesEnsenanza();
         }
 
         public ProfesorModel Profesor
@@ -115,7 +122,6 @@ namespace TP2_GN.ViewModels
             return true;
         }
 
-
         public string Nombre
         {
             get => Profesor.Nombre;
@@ -128,7 +134,6 @@ namespace TP2_GN.ViewModels
                 }
             }
         }
-
 
         public string Apellido
         {
@@ -156,7 +161,6 @@ namespace TP2_GN.ViewModels
             }
         }
 
-
         public string Localidad
         {
             get => Profesor.Localidad;
@@ -166,19 +170,6 @@ namespace TP2_GN.ViewModels
                 {
                     Profesor.Localidad = value;
                     OnPropertyChanged(nameof(Localidad));
-                }
-            }
-        }
-
-        public string Provincia
-        {
-            get => Profesor.Provincia;
-            set
-            {
-                if (Profesor.Provincia != value)
-                {
-                    Profesor.Provincia = value;
-                    OnPropertyChanged(nameof(Provincia));
                 }
             }
         }
@@ -209,18 +200,6 @@ namespace TP2_GN.ViewModels
             }
         }
 
-        public string NivelEnsenanza
-        {
-            get => Profesor.NivelEnsenanza;
-            set
-            {
-                if (Profesor.NivelEnsenanza != value)
-                {
-                    Profesor.NivelEnsenanza = value;
-                    OnPropertyChanged(nameof(NivelEnsenanza));
-                }
-            }
-        }
 
         public string Materia
         {
@@ -235,7 +214,7 @@ namespace TP2_GN.ViewModels
             }
         }
 
-        public List<string> DiasClase
+        public List<DiasSemanaEnum> DiasClase
         {
             get => Profesor.DiasClase;
             set
@@ -248,206 +227,168 @@ namespace TP2_GN.ViewModels
             }
         }
 
-        public List<string> Turnos
+        // Métodos para añadir o eliminar un item cuando se selecciona o deselecciona
+        public void ToggleDiaSeleccionado(DiasSemanaEnum dia, bool isSelected)
         {
-            get => Profesor.Turnos;
-            set
+            if (isSelected)
             {
-                if (Profesor.Turnos != value)
+                if (!DiasClase.Contains(dia))
                 {
-                    Profesor.Turnos = value;
+                    DiasClase.Add(dia);
+                    OnPropertyChanged(nameof(DiasClase));
+                }
+            }
+            else
+            {
+                if (DiasClase.Contains(dia))
+                {
+                    DiasClase.Remove(dia);
+                    OnPropertyChanged(nameof(DiasClase));
+                }
+            }
+        }
+
+        public void ToggleTurnoSeleccionado(TurnosEnum turno, bool isSelected)
+        {
+            if (isSelected)
+            {
+                if (!Turnos.Contains(turno))
+                {
+                    Turnos.Add(turno);
+                    OnPropertyChanged(nameof(Turnos));
+                }
+            }
+            else
+            {
+                if (Turnos.Contains(turno))
+                {
+                    Turnos.Remove(turno);
                     OnPropertyChanged(nameof(Turnos));
                 }
             }
         }
 
-        // Métodos para bindings
-        public ObservableCollection<string> Provincias
-        {
-            get => _provincias;
-            set
+        public List<TurnosEnum> Turnos
             {
-                _provincias = value;
-                OnPropertyChanged(nameof(Provincias));
+                get => Profesor.Turnos;
+                set
+                {
+                    if (Profesor.Turnos != value)
+                    {
+                        Profesor.Turnos = value;
+                        OnPropertyChanged(nameof(Turnos));
+                    }
+                }
             }
-        }
 
-        private void CargarProvincias()
-        {
-            Provincias = new ObservableCollection<string>
+            public ObservableCollection<string> Provincias
             {
-                "Buenos Aires",
-                "Catamarca",
-                "Chaco",
-                "Chubut",
-                "Córdoba",
-                "Corrientes",
-                "Entre Ríos",
-                "Formosa",
-                "Jujuy",
-                "La Pampa",
-                "La Rioja",
-                "Mendoza",
-                "Misiones",
-                "Neuquén",
-                "Río Negro",
-                "Salta",
-                "San Juan",
-                "San Luis",
-                "Santa Cruz",
-                "Santa Fe",
-                "Santiago Del Estero",
-                "Tierra Del Fuego",
-                "Tucumán"
-            };
-        }
-
-        public ObservableCollection<string> Categorias
-        {
-            get => _categorias;
-            set
-            {
-                _categorias = value;
-                OnPropertyChanged(nameof(Categorias));
+                get => _provincias;
+                set
+                {
+                    _provincias = value;
+                    OnPropertyChanged(nameof(Provincias));
+                }
             }
-        }
 
-        private void CargarCategorias()
-        {
-            Categorias = new ObservableCollection<string>
+            private void CargarProvincias()
             {
-                "Profesor",
-                "Ayudante",
-                "Jefe de Trabajos Prácticos",
-                "Investigador",
-                "Invitado",
-                "Asistente de Cátedra",
-                "Tutor",
-                "Coordinador Académico"
-            };
-        }
-
-        // Propiedades booleanas para el checkbox de días laborales
-        private bool _diasClaseLunes;
-        public bool DiasClaseLunes
-        {
-            get { return _diasClaseLunes; }
-            set
-            {
-                _diasClaseLunes = value;
-                OnPropertyChanged(nameof(DiasClaseLunes));
+                Provincias = new ObservableCollection<string>
+                {
+                    "Buenos Aires",
+                    "Catamarca",
+                    "Chaco",
+                    "Chubut",
+                    "Córdoba",
+                    "Corrientes",
+                    "Entre Ríos",
+                    "Formosa",
+                    "Jujuy",
+                    "La Pampa",
+                    "La Rioja",
+                    "Mendoza",
+                    "Misiones",
+                    "Neuquén",
+                    "Río Negro",
+                    "Salta",
+                    "San Juan",
+                    "San Luis",
+                    "Santa Cruz",
+                    "Santa Fe",
+                    "Santiago Del Estero",
+                    "Tierra Del Fuego",
+                    "Tucumán"
+                };
             }
-        }
 
-        private bool _diasClaseMartes;
-        public bool DiasClaseMartes
-        {
-            get { return _diasClaseMartes; }
-            set
+
+            public ObservableCollection<string> Categorias
             {
-                _diasClaseMartes = value;
-                OnPropertyChanged(nameof(DiasClaseMartes));
+                get => _categorias;
+                set
+                {
+                    _categorias = value;
+                    OnPropertyChanged(nameof(Categorias));
+                }
             }
-        }
 
-        private bool _diasClaseMiercoles;
-        public bool DiasClaseMiercoles
-        {
-            get { return _diasClaseMiercoles; }
-            set
+            private void CargarCategorias()
             {
-                _diasClaseMiercoles = value;
-                OnPropertyChanged(nameof(DiasClaseMiercoles));
+                Categorias = new ObservableCollection<string>
+                {
+                    "Profesor",
+                    "Ayudante",
+                    "Jefe de Trabajos Prácticos",
+                    "Investigador",
+                    "Invitado",
+                    "Asistente de Cátedra",
+                    "Tutor",
+                    "Coordinador Académico"
+                };
             }
-        }
 
-        private bool _diasClaseJueves;
-        public bool DiasClaseJueves
-        {
-            get { return _diasClaseJueves; }
-            set
+            public ObservableCollection<string> NivelesEnsenanza
             {
-                _diasClaseJueves = value;
-                OnPropertyChanged(nameof(DiasClaseJueves));
+                get => _nivelesEnsenanza;
+                set
+                {
+                    _nivelesEnsenanza = value;
+                    OnPropertyChanged(nameof(_nivelesEnsenanza));
+                }
             }
-        }
 
-        private bool _diasClaseViernes;
-        public bool DiasClaseViernes
-        {
-            get { return _diasClaseViernes; }
-            set
+            private void CargarNivelesEnsenanza()
             {
-                _diasClaseViernes = value;
-                OnPropertyChanged(nameof(DiasClaseViernes));
-            }
-        }
+                NivelesEnsenanza = new ObservableCollection<string>
+                {
+                    "Universitario",
+                    "Secundario",
+                    "Primario",
+                    "Inicial"
+                };
+            } 
 
-        private bool _diasClaseSabado;
-        public bool DiasClaseSabado
-        {
-            get { return _diasClaseSabado; }
-            set
+
+
+            // Método para eliminar el profesor seleccionado
+            private void Eliminar()
             {
-                _diasClaseSabado = value;
-                OnPropertyChanged(nameof(DiasClaseSabado));
+                dataBase.Delete(Profesor);
+                Profesores.Remove(Profesor); // Remueve de la colección
+                Profesor = new ProfesorModel(); // Resetea la selección
             }
-        }
 
-        // Propiedades booleanas para el checkbox de turnos
-        private bool _turnoManana;
-        public bool TurnoManana
-        {
-            get { return _turnoManana; }
-            set
+            // Método para actualizar la información de un profesor
+            private void Actualizar()
             {
-                _turnoManana = value;
-                OnPropertyChanged(nameof(TurnoManana));
+                dataBase.Edit(Profesor);
+                Profesores = dataBase.Get(); // Refresca la lista
+                OnPropertyChanged(nameof(Profesores)); // Notifica el cambio
             }
-        }
 
-        private bool _turnoTarde;
-        public bool TurnoTarde
-        {
-            get { return _turnoTarde; }
-            set
-            {
-                _turnoTarde = value;
-                OnPropertyChanged(nameof(TurnoTarde));
-            }
-        }
-
-        private bool _turnoNoche;
-        public bool TurnoNoche
-        {
-            get { return _turnoNoche; }
-            set
-            {
-                _turnoNoche = value;
-                OnPropertyChanged(nameof(TurnoNoche));
-            }
-        }
-
-
-        // Método para eliminar el profesor seleccionado
-        private void Eliminar()
-        {
-            dataBase.Delete(Profesor);
-            Profesores.Remove(Profesor); // Remueve de la colección
-            Profesor = new ProfesorModel(); // Resetea la selección
-        }
-
-        // Método para actualizar la información de un profesor
-        private void Actualizar()
-        {
-            dataBase.Edit(Profesor);
-            Profesores = dataBase.Get(); // Refresca la lista
-            OnPropertyChanged(nameof(Profesores)); // Notifica el cambio
-        }
-
-        // Validación de eliminación y actualización
-        private bool CanEliminarProfesor() => Profesor != null && Profesor.Id > 0;
-        private bool CanActualizarProfesor() => Profesor != null && Profesor.Id > 0;
+            // Validación de eliminación y actualización
+            private bool CanEliminarProfesor() => Profesor != null && Profesor.Id > 0;
+            private bool CanActualizarProfesor() => Profesor != null && Profesor.Id > 0;
 
 
     }

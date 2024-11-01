@@ -124,6 +124,9 @@
     </ApplicationDefinition>
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="DataBase\DB.cs" />
+    <Compile Include="Utilities\DiasSemanaEnum.cs" />
+    <Compile Include="Utilities\ListBoxSelectedItemsBehavior.cs" />
+    <Compile Include="Utilities\TurnosEnum.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\ProfesorViewModel.cs" />
     <Compile Include="Views\Registrar.xaml.cs">
@@ -186,5 +189,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

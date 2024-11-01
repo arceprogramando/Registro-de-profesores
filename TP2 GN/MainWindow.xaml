@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP2_GN"
         xmlns:views="clr-namespace:TP2_GN.Views"
+        xmlns:viewModels="clr-namespace:TP2_GN.ViewModels"
         mc:Ignorable="d"
         Title="Registro de profesores" Height="700" Width="1300" >
 
+    <Window.DataContext>
+        <viewModels:ProfesorViewModel/>
+    </Window.DataContext>
+
     <Grid Background="#6e9aee" >
 
-
-
         <views:Registrar/>
-
-
 
     </Grid>
 

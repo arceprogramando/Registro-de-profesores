@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TP2_GN.Utilities;
 
 namespace TP2_GN.Models
 {
@@ -20,8 +21,8 @@ namespace TP2_GN.Models
         private string _categoria;
         private string _nivelEnsenanza;
         private string _materia;
-        private List<string> _diasClase;
-        private List<string> _turnos;
+        private List<DiasSemanaEnum> _diasClase;
+        private List<TurnosEnum> _turnos;
         private int _cantidadHoras;
         private decimal _valorHoraCatedra;
 
@@ -157,7 +158,7 @@ namespace TP2_GN.Models
                 OnPropertyChanged(nameof(Materia));
             }
         }
-        public List<string> DiasClase
+        public List<DiasSemanaEnum> DiasClase
         {
             get => _diasClase;
             set
@@ -167,7 +168,7 @@ namespace TP2_GN.Models
             }
 
         }
-        public List<string> Turnos
+        public List<TurnosEnum> Turnos
         {
             get => _turnos;
             set
@@ -212,16 +213,9 @@ namespace TP2_GN.Models
         // Constructor opcional
         public ProfesorModel()
         {
-            DiasClase = new List<string>(); // Inicializa la lista
-            Turnos = new List<string>();
+            DiasClase = new List<DiasSemanaEnum>(); // Inicializa la lista
+            Turnos = new List<TurnosEnum>();
         }
-
-        public bool DiasClaseLunes { get; set; }
-        public bool DiasClaseMartes { get; set; }
-        public bool DiasClaseMiercoles { get; set; }
-        public bool DiasClaseJueves { get; set; }
-        public bool DiasClaseViernes { get; set; }
-        public bool DiasClaseSabado { get; set; }
 
         public bool TurnoManana { get; set; }
         public bool TurnoTarde { get; set; }
@@ -229,7 +223,7 @@ namespace TP2_GN.Models
 
         public ProfesorModel(int id, string nombre, string apellido, string domicilio, string localidad, string provincia,
                         string nroCelular, string email, string categoria, string nivelEnsenanza, 
-                        string materia, List<string> diasClase, List<string> turnos, 
+                        string materia, List<DiasSemanaEnum> diasClase, List<TurnosEnum> turnos, 
                         int cantidadHoras, decimal valorHoraCatedra) : this()
         {
             Id = id;

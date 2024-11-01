@@ -5,14 +5,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:local="clr-namespace:TP2_GN.Views"
              xmlns:viewmodels="clr-namespace:TP2_GN.ViewModels" 
+             xmlns:utilities="clr-namespace:TP2_GN.Utilities"
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1300" >
 
     <UserControl.Resources>
-        <viewmodels:ProfesorViewModel x:Key="profesores"/>
+        <viewmodels:ProfesorViewModel x:Key="Profesores"/>
     </UserControl.Resources>
 
-    <Grid DataContext="{Binding Source={StaticResource profesores}}">
+    <Grid DataContext="{Binding Source={StaticResource Profesores}}">
         <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="5*" />
@@ -52,7 +53,7 @@
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                 <StackPanel>
                     <Label Content="Nombre/s"/>
-                    <TextBox x:Name="txtNombre" Margin="10" HorizontalAlignment="Stretch" MaxLength="50" 
+                    <TextBox x:Name="txtNombre"  Margin="10" HorizontalAlignment="Stretch" MaxLength="50" 
                              Text="{Binding Profesor.Nombre, UpdateSourceTrigger=PropertyChanged}" />
 
                     <Label Content="Apellido"/>
@@ -69,7 +70,7 @@
 
                     <Label Content="Provincia"/>
                     <ComboBox x:Name="cbxProvincia" Margin="10" HorizontalAlignment="Stretch" ItemsSource="{Binding Provincias}"
-                                       SelectedItem="{Binding Profesor.Provincia, UpdateSourceTrigger=PropertyChanged}" />
+                                       SelectedItem="{Binding Profesor.Provincia, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <Label Content="Nro. de celular"/>
                     <TextBox x:Name="txtCelular" Margin="10" HorizontalAlignment="Stretch" MaxLength="50" 
@@ -89,32 +90,28 @@
 
                     <Label Content="Nivel de enseñanza"/>
                     <ComboBox x:Name="cbxNivelEnsenanza" Margin="10" HorizontalAlignment="Stretch" 
-                              SelectedItem="{Binding Profesor.NivelEnsenanza, UpdateSourceTrigger=PropertyChanged}">
-                        <ComboBoxItem Content="Universitario"/>
-                        <ComboBoxItem Content="Secundario"/>
-                        <ComboBoxItem Content="Primario"/>
-                        <ComboBoxItem Content="Inicial"/>
-                    </ComboBox>
+                              ItemsSource="{Binding NivelesEnsenanza}" SelectedItem="{Binding Profesor.NivelEnsenanza,
+                                Mode=TwoWay}" />
 
-                    <Label Content="Días que imparte clases"/>
-                    <StackPanel x:Name="txtDiasClase" Margin="10">
-                        <CheckBox Name="lunesCheckbox" IsChecked="{Binding Profesor.DiasClaseLunes, Mode=TwoWay}" Content="Lunes" />
-                        <CheckBox Name="martesCheckbox" IsChecked="{Binding Profesor.DiasClaseMartes, Mode=TwoWay}" Content="Martes" />
-                        <CheckBox Name="miercolesCheckbox" IsChecked="{Binding Profesor.DiasClaseMiercoles, Mode=TwoWay}" Content="Miércoles" />
-                        <CheckBox Name="juevesCheckbox" IsChecked="{Binding Profesor.DiasClaseJueves, Mode=TwoWay}" Content="Jueves" />
-                        <CheckBox Name="viernesCheckbox" IsChecked="{Binding Profesor.DiasClaseViernes, Mode=TwoWay}" Content="Viernes" />
-                        <CheckBox Name="sabadoCheckbox" IsChecked="{Binding Profesor.DiasClaseSabado, Mode=TwoWay}" Content="Sábado" />
-                    </StackPanel>
+                    <WrapPanel HorizontalAlignment="Center" Margin="10" >
 
-                    <Label Content="Turno"/>
-                    <StackPanel x:Name="txtTurnos" Margin="10">
-                        <CheckBox Content="Mañana" x:Name="mananaCheckbox" 
-                                  IsChecked="{Binding Profesor.TurnoManana, UpdateSourceTrigger=PropertyChanged}"/>
-                        <CheckBox Content="Tarde" x:Name="tardeCheckbox" 
-                                  IsChecked="{Binding Profesor.TurnoTarde, UpdateSourceTrigger=PropertyChanged}"/>
-                        <CheckBox Content="Noche" x:Name="nocheCheckbox" 
-                                  IsChecked="{Binding Profesor.TurnoNoche, UpdateSourceTrigger=PropertyChanged}"/>
-                    </StackPanel>
+                        <Label Content="Días que imparte clases" HorizontalAlignment="Left"/>
+                        <StackPanel x:Name="txtDiasClase">
+                            <ListBox ItemsSource="{Binding DiasSemanaList}"
+                                SelectionMode="Multiple"
+                                utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding DiasClase, Mode=TwoWay}" />
+                        </StackPanel>
+
+                            <Label Content="Turno/s" HorizontalAlignment="Right"/>
+                        <StackPanel x:Name="txtTurnos" Margin="10" HorizontalAlignment="Right">
+                            <ListBox ItemsSource="{Binding TurnosList}"
+                                SelectionMode="Multiple"
+                                utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding Turnos, Mode=TwoWay}"/>      
+                        </StackPanel>
+
+
+                    </WrapPanel>
+                   
                     
                     
                     <Button Content="Guardar" Width="100" Margin="10" HorizontalAlignment="Center" 

@@ -25,7 +25,6 @@ namespace TP2_GN.Commands
         {
 
         }
-
         public bool CanExecute(object parameter)
         {
             return _canExecute == null ? true : _canExecute(parameter);

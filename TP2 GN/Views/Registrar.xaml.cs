@@ -28,5 +28,9 @@ namespace TP2_GN.Views
             DataContext = new ProfesorViewModel();
         }
 
+        private void ListBox_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

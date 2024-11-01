@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TP2_GN.Models;
 using MySql.Data.MySqlClient;
+using TP2_GN.Utilities;
 
 namespace TP2_GN.DataBase
 {
@@ -48,8 +49,46 @@ namespace TP2_GN.DataBase
                         Categoria = reader["CATEGORIA"] != DBNull.Value ? (string)reader["CATEGORIA"] : string.Empty,
                         NivelEnsenanza = reader["NIVEL_ENSENANZA"] != DBNull.Value ? (string)reader["NIVEL_ENSENANZA"] : string.Empty,
                         Materia = reader["MATERIA"] != DBNull.Value ? (string)reader["MATERIA"] : string.Empty,
-                        DiasClase = reader["DIAS_CLASES"] != DBNull.Value ? ((string)reader["DIAS_CLASES"]).Split(',').ToList() : new List<string>(),
-                        Turnos = reader["TURNOS"] != DBNull.Value ? ((string)reader["TURNOS"]).Split(',').ToList() : new List<string>()
+
+                        // Parsear y convertir DiasClase a una lista de enums
+                        DiasClase = reader["DIAS_CLASES"] != DBNull.Value
+                        ? ((string)reader["DIAS_CLASES"]).Split(',') // Dividir por comas
+                            .Select(dia =>
+                            {
+                                // Intentar parsear cada día
+                                if (Enum.TryParse(dia.Trim(), out DiasSemanaEnum resultado))
+                                {
+                                    return resultado;
+                                }
+                                else
+                                {
+                                    // Manejar errores si el valor no es válido
+                                    return (DiasSemanaEnum?)null;
+                                }
+                            })
+                            .Where(dia => dia.HasValue) // Filtrar valores nulos
+                            .Select(dia => dia.Value) // Seleccionar sólo valores válidos
+                            .ToList()
+                        : new List<DiasSemanaEnum>(),
+
+                        // Parsear y convertir Turnos a una lista de enums
+                        Turnos = reader["TURNOS"] != DBNull.Value
+                        ? ((string)reader["TURNOS"]).Split(',')
+                            .Select(turno =>
+                            {
+                                if (Enum.TryParse(turno.Trim(), out TurnosEnum resultado))
+                                {
+                                    return resultado;
+                                }
+                                else
+                                {
+                                    return (TurnosEnum?)null;
+                                }
+                            })
+                            .Where(turno => turno.HasValue)
+                            .Select(turno => turno.Value)
+                            .ToList()
+                        : new List<TurnosEnum>()
 
 
                     });
@@ -86,8 +125,17 @@ namespace TP2_GN.DataBase
                         cmd.Parameters.AddWithValue("@Categoria", model.Categoria ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@Nivel_ensenanza", model.NivelEnsenanza ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@Materia", model.Materia ?? (object)DBNull.Value);
-                        cmd.Parameters.AddWithValue("@Dias_clases", string.Join(",", model.DiasClase));
-                        cmd.Parameters.AddWithValue("@Turnos", string.Join(",", model.Turnos));
+
+                        string diasClasesString = string.Join(",", model.DiasClase
+                                           .OrderBy(d => d) // Ordena la lista de enums
+                                           .Select(d => d.ToString())); // Convierte a string
+
+                        cmd.Parameters.AddWithValue("@Dias_clases", diasClasesString);
+
+                        string turnosString = string.Join(",", model.Turnos
+                                              .OrderBy(t => t)
+                                              .Select(t => t.ToString()));
+                        cmd.Parameters.AddWithValue("@Turnos", turnosString);
 
                         connect.Open();
                         cmd.ExecuteNonQuery();
