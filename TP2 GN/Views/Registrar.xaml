@@ -42,7 +42,7 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left">
                             <Label Content="Provincia"/>
-                            <ComboBox x:Name="cbxProvincia" HorizontalAlignment="Stretch" VerticalAlignment="Center" BorderBrush="#6497B1" BorderThickness="2" Padding="4" Width="160" Height="28" ItemsSource="{Binding Provincias}" SelectedItem="{Binding Profesor.Provincia, UpdateSourceTrigger=PropertyChanged}"/>
+                            <ComboBox x:Name="cbxProvincia" HorizontalAlignment="Stretch" VerticalAlignment="Center" BorderBrush="#6497B1" BorderThickness="2" Padding="4" Width="160" Height="28" ItemsSource="{Binding Provincias}" SelectedIndex="0" SelectedItem="{Binding Profesor.Provincia, UpdateSourceTrigger=PropertyChanged}"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left">
                             <Label Content="Localidad"/>
@@ -92,12 +92,7 @@
                                         <Setter Property="Foreground" Value="Black"/>
                                         <Setter Property="HorizontalContentAlignment" Value="Center"/>
                                         <Setter Property="VerticalContentAlignment" Value="Center"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsSelected" Value="True">
-                                                <Setter Property="Background" Value="Green"/><!-- Fondo verde para seleccionado -->
-                                                <Setter Property="Foreground" Value="Black"/><!-- Texto siempre negro -->
-                                            </Trigger>
-                                        </Style.Triggers>
+                                    
                                     </Style>
                                 </ListBox.Resources>
                             </ListBox>
@@ -111,10 +106,7 @@
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                 <StackPanel>
                     <TextBlock Text="Consulta de Profesores" FontSize="20" FontWeight="Bold" Foreground="#000000" TextAlignment="Center" Margin="0,0,0,20"/>
-                    <StackPanel>
-                        <Label Content="Buscar por Nombre:"/>
-                        <TextBox x:Name="txtBuscarNombre" Width="390" VerticalAlignment="Center" BorderBrush="#6497B1" BorderThickness="2" Padding="4" Text="{Binding BusquedaNombre, UpdateSourceTrigger=PropertyChanged}"/>
-                    </StackPanel>
+                   
                     <StackPanel>
                         <Label Content="Resultados:"/>
                         <ListBox ItemsSource="{Binding ResultadosConsulta}" SelectedItem="{Binding ProfesorSeleccionado}" Margin="0,5,0,0" BorderBrush="#6497B1" BorderThickness="2">
