@@ -12,6 +12,7 @@ namespace TP2_GN.Commands
 
         private readonly Action<object> _execute;
         private readonly Predicate<object> _canExecute;
+        private Action listarProfesores;
 
         // Constructor
         public RelayCommand(Action<object> execute, Predicate<object> canExecute)
@@ -25,6 +26,12 @@ namespace TP2_GN.Commands
         {
 
         }
+
+        public RelayCommand(Action listarProfesores)
+        {
+            this.listarProfesores = listarProfesores;
+        }
+
         public bool CanExecute(object parameter)
         {
             return _canExecute == null ? true : _canExecute(parameter);
