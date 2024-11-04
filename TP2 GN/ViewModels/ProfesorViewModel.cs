@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -106,13 +107,10 @@ namespace TP2_GN.ViewModels
             Profesores = dataBase.Get(); // Actualiza la colección desde la base de datos
             OnPropertyChanged(nameof(Profesores));
         }
-        // Método de validación personalizado
         private bool IsValidProfesor(ProfesorModel profesor)
         {
-            // Primero verifica que el objeto profesor no sea null
             if (profesor == null) return false;
 
-            // Despues verifica que las propiedades obligatorias no sean nulas o vacías
             if (string.IsNullOrWhiteSpace(profesor.Nombre))
             {
                 MessageBox.Show("El campo 'Nombre' es obligatorio.");
@@ -123,6 +121,27 @@ namespace TP2_GN.ViewModels
             {
                 MessageBox.Show("El campo 'Apellido' es obligatorio.");
                 return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(profesor.Materia))
+            {
+                MessageBox.Show("El campo 'Materia' es obligatorio.");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(profesor.Email))
+            {
+                MessageBox.Show("El campo 'Email' es obligatorio.");
+                return false;
+            }
+            else
+            {
+                string patronEmail = @"^[^@\s]+@gmail\.com$";
+                if (!Regex.IsMatch(profesor.Email, patronEmail, RegexOptions.IgnoreCase))
+                {
+                    MessageBox.Show("El campo 'Email' debe ser una dirección válida de Gmail. (cuenta@email.com)");
+                    return false;
+                }
             }
 
             return true;

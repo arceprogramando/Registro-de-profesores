@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\viewmodels\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\arcep\\onedrive\\desktop\\proyectoutn\\tp2 gn\\views\\registrar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\registrar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -11,28 +19,24 @@
       "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\registrar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\utilities\\turnosenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\turnosenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\arcep\\onedrive\\desktop\\proyectoutn\\tp2 gn\\utilities\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\utilities\\diassemanaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\diassemanaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\arcep\\onedrive\\desktop\\proyectoutn\\tp2 gn\\viewmodels\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\database\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\database\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\utilities\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\utilities\\turnosenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\turnosenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -49,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\tp2 gn\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|TP2 GN||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
@@ -81,7 +81,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 367,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -97,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Registrar.xaml",
               "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Views\\Registrar.xaml",
               "RelativeDocumentMoniker": "TP2 GN\\Views\\Registrar.xaml",
@@ -109,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "DiasSemanaEnum.cs",
               "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Utilities\\DiasSemanaEnum.cs",
               "RelativeDocumentMoniker": "TP2 GN\\Utilities\\DiasSemanaEnum.cs",
@@ -122,43 +122,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ListBoxSelectedItemsBehavior.cs",
-              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
-              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
-              "RelativeToolTip": "TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAcwBkAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T05:43:53.411Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "TurnosEnum.cs",
               "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Utilities\\TurnosEnum.cs",
               "RelativeDocumentMoniker": "TP2 GN\\Utilities\\TurnosEnum.cs",
               "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Utilities\\TurnosEnum.cs",
               "RelativeToolTip": "TP2 GN\\Utilities\\TurnosEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T06:06:53.466Z"
+              "WhenOpened": "2024-11-01T06:06:53.466Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\App.config",
-              "RelativeDocumentMoniker": "TP2 GN\\App.config",
-              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\App.config",
-              "RelativeToolTip": "TP2 GN\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-17T04:35:29.059Z"
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "TP2 GN\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\MainWindow.xaml",
+              "RelativeToolTip": "TP2 GN\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-05T14:39:27.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfesorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\ViewModels\\ProfesorViewModel.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ProfesorViewModel.cs",
+              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\ViewModels\\ProfesorViewModel.cs",
+              "RelativeToolTip": "TP2 GN\\ViewModels\\ProfesorViewModel.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAgwJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:44:14.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ListBoxSelectedItemsBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
+              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
+              "RelativeToolTip": "TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T15:19:28.766Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "TP2 GN\\ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T01:41:35.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Registrar.xaml.cs",
               "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Views\\Registrar.xaml.cs",
               "RelativeDocumentMoniker": "TP2 GN\\Views\\Registrar.xaml.cs",
@@ -171,20 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DB.cs",
-              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\DataBase\\DB.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\DataBase\\DB.cs",
-              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\DataBase\\DB.cs",
-              "RelativeToolTip": "TP2 GN\\DataBase\\DB.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAewDoAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T21:55:45.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Commands\\RelayCommand.cs",
               "RelativeDocumentMoniker": "TP2 GN\\Commands\\RelayCommand.cs",
@@ -192,45 +206,31 @@
               "RelativeToolTip": "TP2 GN\\Commands\\RelayCommand.cs",
               "ViewState": "AgIAABgAAAAAAAAAAADwvzIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T18:02:26.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T18:02:26.25Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "TP2 GN\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\MainWindow.xaml",
-              "RelativeToolTip": "TP2 GN\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-05T14:39:27.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProfesorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\ViewModels\\ProfesorViewModel.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ProfesorViewModel.cs",
-              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\ViewModels\\ProfesorViewModel.cs",
-              "RelativeToolTip": "TP2 GN\\ViewModels\\ProfesorViewModel.cs",
-              "ViewState": "AgIAACABAAAAAAAAAAApwC8BAAAhAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "DB.cs",
+              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\DataBase\\DB.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\DataBase\\DB.cs",
+              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\DataBase\\DB.cs",
+              "RelativeToolTip": "TP2 GN\\DataBase\\DB.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAewDoAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T01:44:14.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T21:55:45.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\ViewModels\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ViewModelBase.cs",
-              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\ViewModels\\ViewModelBase.cs",
-              "RelativeToolTip": "TP2 GN\\ViewModels\\ViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T01:41:35.381Z"
+              "DocumentIndex": 9,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\App.config",
+              "RelativeDocumentMoniker": "TP2 GN\\App.config",
+              "ToolTip": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\App.config",
+              "RelativeToolTip": "TP2 GN\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-17T04:35:29.059Z"
             },
             {
               "$type": "Document",
@@ -246,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\App.xaml.cs",
               "RelativeDocumentMoniker": "TP2 GN\\App.xaml.cs",
@@ -282,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ProfesorModel.cs",
               "DocumentMoniker": "C:\\Users\\arcep\\OneDrive\\Desktop\\ProyectoUTN\\TP2 GN\\Models\\ProfesorModel.cs",
               "RelativeDocumentMoniker": "TP2 GN\\Models\\ProfesorModel.cs",

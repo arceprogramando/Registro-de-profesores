@@ -188,7 +188,7 @@
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Left">
-                        <Label Content="Materia que dicta"/>
+                        <Label Content="Materias que dicta"/>
                         <TextBox x:Name="txtMateria"
                                  HorizontalAlignment="Stretch"
                                  Width="390"
@@ -280,31 +280,27 @@
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Auto">
                 <StackPanel>
-                    <TextBlock Text="Consulta de Profesores"
-                               FontSize="20"
-                               FontWeight="Bold"
-                               Foreground="#000000"
-                               TextAlignment="Center"
-                               Margin="0,0,0,20"/>
-
-                    <StackPanel>
-                        <Label Content="Resultados:"/>
-                        <ListBox ItemsSource="{Binding Profesores}"
-                                 SelectedItem="{Binding Profesor}"
-                                 Margin="0,5,0,0"
-                                 BorderThickness="2">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Nombre}"/>
-                                        <TextBlock Text=" "/>
-
-                                        <TextBlock Text="{Binding Apellido}"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                    </StackPanel>
+                    <Label Content="Resultados:"/>
+                    <ListBox ItemsSource="{Binding Profesores}"
+                             SelectedItem="{Binding Profesor}"
+                             Margin="0,5,0,0"
+                             BorderThickness="2">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Nombre}"/>
+                                    <TextBlock Text=" "/>
+                                    <TextBlock Text="{Binding Apellido}"/>
+                                    <TextBlock Text=" | "/>
+                                    <TextBlock Text="{Binding Email}"/>
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding Materia}"/>
+                                    <TextBlock Text=" - "/>
+                                    <TextBlock Text="{Binding NroCelular}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </StackPanel>
             </ScrollViewer>
         </Border>
