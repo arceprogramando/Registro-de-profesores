@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -28,6 +29,7 @@ namespace TP2_GN.ViewModels
 
         // Comandos para agregar, eliminar y actualizar profesores
         public ICommand AgregarCommand { get; }
+        public RelayCommand ListarProfesoresCommand { get; }
         public ICommand LimpiarCommand { get; }
         public ICommand EliminarCommand { get; }
         public ICommand ActualizarCommand { get; }
@@ -39,6 +41,7 @@ namespace TP2_GN.ViewModels
             // Instancias necesarias
             dataBase = new DB();
             AgregarCommand = new RelayCommand(Agregar);
+            ListarProfesoresCommand = new RelayCommand(ListarProfesores);
             _profesor = new ProfesorModel();
             _profesores = dataBase.Get();
 
@@ -99,14 +102,15 @@ namespace TP2_GN.ViewModels
             }
         }
 
-
-        // Método de validación personalizado
+        private void ListarProfesores()
+        {
+            Profesores = dataBase.Get(); // Actualiza la colección desde la base de datos
+            OnPropertyChanged(nameof(Profesores));
+        }
         private bool IsValidProfesor(ProfesorModel profesor)
         {
-            // Primero verifica que el objeto profesor no sea null
             if (profesor == null) return false;
 
-            // Despues verifica que las propiedades obligatorias no sean nulas o vacías
             if (string.IsNullOrWhiteSpace(profesor.Nombre))
             {
                 MessageBox.Show("El campo 'Nombre' es obligatorio.");
@@ -117,6 +121,27 @@ namespace TP2_GN.ViewModels
             {
                 MessageBox.Show("El campo 'Apellido' es obligatorio.");
                 return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(profesor.Materia))
+            {
+                MessageBox.Show("El campo 'Materia' es obligatorio.");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(profesor.Email))
+            {
+                MessageBox.Show("El campo 'Email' es obligatorio.");
+                return false;
+            }
+            else
+            {
+                string patronEmail = @"^[^@\s]+@gmail\.com$";
+                if (!Regex.IsMatch(profesor.Email, patronEmail, RegexOptions.IgnoreCase))
+                {
+                    MessageBox.Show("El campo 'Email' debe ser una dirección válida de Gmail. (cuenta@email.com)");
+                    return false;
+                }
             }
 
             return true;
@@ -269,31 +294,31 @@ namespace TP2_GN.ViewModels
         }
 
         public List<TurnosEnum> Turnos
+        {
+            get => Profesor.Turnos;
+            set
             {
-                get => Profesor.Turnos;
-                set
+                if (Profesor.Turnos != value)
                 {
-                    if (Profesor.Turnos != value)
-                    {
-                        Profesor.Turnos = value;
-                        OnPropertyChanged(nameof(Turnos));
-                    }
+                    Profesor.Turnos = value;
+                    OnPropertyChanged(nameof(Turnos));
                 }
             }
+        }
 
-            public ObservableCollection<string> Provincias
+        public ObservableCollection<string> Provincias
+        {
+            get => _provincias;
+            set
             {
-                get => _provincias;
-                set
-                {
-                    _provincias = value;
-                    OnPropertyChanged(nameof(Provincias));
-                }
+                _provincias = value;
+                OnPropertyChanged(nameof(Provincias));
             }
+        }
 
-            private void CargarProvincias()
-            {
-                Provincias = new ObservableCollection<string>
+        private void CargarProvincias()
+        {
+            Provincias = new ObservableCollection<string>
                 {
                     "Buenos Aires",
                     "Catamarca",
@@ -319,22 +344,22 @@ namespace TP2_GN.ViewModels
                     "Tierra Del Fuego",
                     "Tucumán"
                 };
-            }
+        }
 
 
-            public ObservableCollection<string> Categorias
+        public ObservableCollection<string> Categorias
+        {
+            get => _categorias;
+            set
             {
-                get => _categorias;
-                set
-                {
-                    _categorias = value;
-                    OnPropertyChanged(nameof(Categorias));
-                }
+                _categorias = value;
+                OnPropertyChanged(nameof(Categorias));
             }
+        }
 
-            private void CargarCategorias()
-            {
-                Categorias = new ObservableCollection<string>
+        private void CargarCategorias()
+        {
+            Categorias = new ObservableCollection<string>
                 {
                     "Profesor",
                     "Ayudante",
@@ -345,50 +370,50 @@ namespace TP2_GN.ViewModels
                     "Tutor",
                     "Coordinador Académico"
                 };
-            }
+        }
 
-            public ObservableCollection<string> NivelesEnsenanza
+        public ObservableCollection<string> NivelesEnsenanza
+        {
+            get => _nivelesEnsenanza;
+            set
             {
-                get => _nivelesEnsenanza;
-                set
-                {
-                    _nivelesEnsenanza = value;
-                    OnPropertyChanged(nameof(_nivelesEnsenanza));
-                }
+                _nivelesEnsenanza = value;
+                OnPropertyChanged(nameof(_nivelesEnsenanza));
             }
+        }
 
-            private void CargarNivelesEnsenanza()
-            {
-                NivelesEnsenanza = new ObservableCollection<string>
+        private void CargarNivelesEnsenanza()
+        {
+            NivelesEnsenanza = new ObservableCollection<string>
                 {
                     "Universitario",
                     "Secundario",
                     "Primario",
                     "Inicial"
                 };
-            } 
+        }
 
 
 
-            // Método para eliminar el profesor seleccionado
-            private void Eliminar()
-            {
-                dataBase.Delete(Profesor);
-                Profesores.Remove(Profesor); // Remueve de la colección
-                Profesor = new ProfesorModel(); // Resetea la selección
-            }
+        // Método para eliminar el profesor seleccionado
+        private void Eliminar()
+        {
+            dataBase.Delete(Profesor);
+            Profesores.Remove(Profesor); // Remueve de la colección
+            Profesor = new ProfesorModel(); // Resetea la selección
+        }
 
-            // Método para actualizar la información de un profesor
-            private void Actualizar()
-            {
-                dataBase.Edit(Profesor);
-                Profesores = dataBase.Get(); // Refresca la lista
-                OnPropertyChanged(nameof(Profesores)); // Notifica el cambio
-            }
+        // Método para actualizar la información de un profesor
+        private void Actualizar()
+        {
+            dataBase.Edit(Profesor);
+            Profesores = dataBase.Get(); // Refresca la lista
+            OnPropertyChanged(nameof(Profesores)); // Notifica el cambio
+        }
 
-            // Validación de eliminación y actualización
-            private bool CanEliminarProfesor() => Profesor != null && Profesor.Id > 0;
-            private bool CanActualizarProfesor() => Profesor != null && Profesor.Id > 0;
+        // Validación de eliminación y actualización
+        private bool CanEliminarProfesor() => Profesor != null && Profesor.Id > 0;
+        private bool CanActualizarProfesor() => Profesor != null && Profesor.Id > 0;
 
 
     }
