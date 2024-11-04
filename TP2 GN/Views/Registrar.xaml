@@ -15,19 +15,18 @@
     <Grid DataContext="{Binding Source={StaticResource Profesores}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <!-- Columna para el formulario de registro -->
             <ColumnDefinition Width="*"/>
-            <!-- Columna para el formulario de consulta -->
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        
         <TextBlock Name="Titulo"
                    Grid.Column="0"
                    Grid.Row="0"
-                   Grid.ColumnSpan="3"
+                   Grid.ColumnSpan="2"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    Text="Registro de profesores"
@@ -268,6 +267,8 @@
                 </StackPanel>
             </ScrollViewer>
         </Border>
+        
+        
         <Border Name="Consulta"
                 Grid.Column="2"
                 Grid.Row="1"
@@ -288,6 +289,9 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="ID: "/>
+                                    <TextBlock Text= "{Binding Id}" />
+                                    <TextBlock Text=" | "/>
                                     <TextBlock Text="{Binding Nombre}"/>
                                     <TextBlock Text=" "/>
                                     <TextBlock Text="{Binding Apellido}"/>
@@ -297,6 +301,10 @@
                                     <TextBlock Text="{Binding Materia}"/>
                                     <TextBlock Text=" - "/>
                                     <TextBlock Text="{Binding NroCelular}"/>
+                                    <TextBlock Text=" "/>
+                                    <Button Content="Eliminar" HorizontalAlignment="Right"
+                                    Command="{Binding EliminarCommand}"/>
+
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
@@ -304,13 +312,17 @@
                 </StackPanel>
             </ScrollViewer>
         </Border>
-        <TextBlock Grid.Column="1"
-                   Grid.Row="2"
+        
+        <!-- pie -->
+        <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+            <TextBlock
                    Text="« Universidad Tecnológica Nacional »"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="14"
                    Foreground="Black"
                    Margin="20,10,20,10"/>
+        </Border>
+        
     </Grid>
 </UserControl>
