@@ -303,7 +303,8 @@
                                     <TextBlock Text="{Binding NroCelular}"/>
                                     <TextBlock Text=" "/>
                                     <Button Content="Eliminar" HorizontalAlignment="Right"
-                                    Command="{Binding EliminarCommand}"/>
+                                     Command="{Binding DataContext.EliminarCommand, 
+                                        RelativeSource={RelativeSource AncestorType=ListBox}}" />
 
                                 </StackPanel>
                             </DataTemplate>

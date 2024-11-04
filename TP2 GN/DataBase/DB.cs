@@ -97,8 +97,8 @@ namespace TP2_GN.DataBase
                     connect.Close();
                 }
 
-                return lastResult;
-            }
+             return lastResult;
+        }
 
 
         internal void Add(ProfesorModel model)

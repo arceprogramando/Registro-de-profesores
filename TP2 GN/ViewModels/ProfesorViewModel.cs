@@ -30,7 +30,6 @@ namespace TP2_GN.ViewModels
         // Comandos para agregar, eliminar y actualizar profesores
         public ICommand AgregarCommand { get; }
         public RelayCommand ListarProfesoresCommand { get; }
-        public ICommand LimpiarCommand { get; }
         public ICommand EliminarCommand { get; }
         public ICommand ActualizarCommand { get; }
         public ICommand ToggleSeleccionCommand { get; }
@@ -40,8 +39,8 @@ namespace TP2_GN.ViewModels
 
             // Instancias necesarias
             dataBase = new DB();
-            AgregarCommand = new RelayCommand((Action<object>)Agregar);
-            EliminarCommand = new RelayCommand((Action<object>)Eliminar);
+            AgregarCommand = new RelayCommand(Agregar);
+            EliminarCommand = new RelayCommand(Eliminar);
             ListarProfesoresCommand = new RelayCommand(ListarProfesores);
             _profesor = new ProfesorModel();
             _profesores = dataBase.Get();
@@ -103,30 +102,6 @@ namespace TP2_GN.ViewModels
             }
         }
 
-        // Método para eliminar
-        private void Eliminar(object profesor)
-        {
-            if (IsValidProfesor(Profesor))
-            {
-                try
-                {
-                    dataBase.Delete(Profesor); // Agrega el objeto a la base de datos
-                    Profesores.Remove(Profesor); // Agrega a la lista en memoria
-
-                    MessageBox.Show("Profesor eliminado correctamente");
-
-                }
-                catch (Exception ex) // Manejo de excepciones
-                {
-                    MessageBox.Show($"Error al eliminar el profesor: {ex.Message}");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Error: No se pudo eliminar");
-            }
-        }
-
         private void ListarProfesores()
         {
             Profesores = dataBase.Get(); // Actualiza la colección desde la base de datos
@@ -171,7 +146,6 @@ namespace TP2_GN.ViewModels
 
             return true;
         }
-
         public string Nombre
         {
             get => Profesor.Nombre;
@@ -418,11 +392,19 @@ namespace TP2_GN.ViewModels
         }
 
         // Método para eliminar el profesor seleccionado
-        private void Eliminar()
+        private void Eliminar(object profesor)
         {
-            dataBase.Delete(Profesor);
-            Profesores.Remove(Profesor); // Remueve de la colección
-            Profesor = new ProfesorModel(); // Resetea la selección
+            if (Profesor != null)
+            {
+                // Elimina el profesor de la base de datos
+                dataBase.Delete(Profesor);
+
+                // Elimina el profesor de la colección en la vista
+                Profesores.Remove(Profesor);
+
+                // Limpia la selección
+                Profesor = null;
+            }
         }
 
         // Método para actualizar la información de un profesor
