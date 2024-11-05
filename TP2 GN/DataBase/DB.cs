@@ -19,7 +19,7 @@ namespace TP2_GN.DataBase
 
         public DB()
         {
-            _connection = "Server=localhost;Database=registro_profesores;Uid=root;Pwd=root;";
+            _connection = "Server=localhost;Database=registro_profesores;Uid=root;Pwd=Quienteconoce1;";
 
         }
 
