@@ -12,7 +12,7 @@
         <viewmodels:ProfesorViewModel x:Key="Profesores"/>
     </UserControl.Resources>
 
-    <Grid DataContext="{Binding Source={StaticResource Profesores}}" Background="#6e9aee">
+    <Grid DataContext="{Binding Source={StaticResource Profesores}}" Background="#6e9aee" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>

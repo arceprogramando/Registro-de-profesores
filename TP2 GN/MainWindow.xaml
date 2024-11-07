@@ -16,12 +16,15 @@
     </Window.DataContext>
 
     <Grid Background="#d0e8ff">
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="530*"/>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.ColumnSpan="2">
+        <Grid Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="154"/>
                 <ColumnDefinition Width="696"/>
@@ -42,7 +45,7 @@
                                IsChecked="True">
 
                         <Grid>
-                            <TextBlock Text="Registrar" />
+                            <TextBlock Text="Registrar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
                         </Grid>
 
                     </Menu:Btn>
@@ -53,7 +56,7 @@
                                IsChecked="True">
 
                         <Grid>
-                            <TextBlock Text="Listar" />
+                            <TextBlock Text="Listar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
                         </Grid>
 
                     </Menu:Btn>
@@ -64,7 +67,7 @@
                                IsChecked="True">
 
                         <Grid>
-                            <TextBlock Text="Modificar" />
+                            <TextBlock Text="Modificar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
                         </Grid>
 
                     </Menu:Btn>
@@ -75,7 +78,7 @@
                                IsChecked="True">
 
                         <Grid>
-                            <TextBlock Text="Eliminar" />
+                            <TextBlock Text="Eliminar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
                         </Grid>
 
                     </Menu:Btn>
@@ -83,18 +86,17 @@
                 </StackPanel>
             </Grid>
 
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="111*"/>
-                    <RowDefinition Height="170*"/>
-                    <RowDefinition Height="229*"/>
-                    <RowDefinition Height="74*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <ContentControl x:Name="Pages"
-                                Content="{Binding VistaActual}" Grid.RowSpan="4" HorizontalAlignment="Center" Width="698" />
-
+                    Content="{Binding VistaActual}"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch" />
             </Grid>
+
 
 
         </Grid>

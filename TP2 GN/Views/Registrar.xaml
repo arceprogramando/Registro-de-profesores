@@ -37,6 +37,7 @@
                    TextWrapping="Wrap"
                    Padding="30,20"
                    TextAlignment="Center"/>
+        
         <Border Name="Form"
                 Grid.Column="0"
                 Grid.Row="1"
@@ -208,51 +209,20 @@
                                   ItemsSource="{Binding NivelesEnsenanza}"
                                   SelectedItem="{Binding Profesor.NivelEnsenanza,Mode=TwoWay}"/>
                     </StackPanel>
-                    <WrapPanel HorizontalAlignment="left"
-                               Margin="10">
-                        <StackPanel x:Name="txtDiasClase"
-                                    Margin="10,0,20,0">
-                            <Label Content="Días que imparte clases"
-                                   HorizontalAlignment="Left"/>
+
+                        <Label Content="Días que imparte clases" />
+                    <StackPanel x:Name="txtDiasClase" HorizontalAlignment="Left" Width="390">
                             <ListBox ItemsSource="{Binding DiasSemanaList}"
-                                     SelectionMode="Multiple"
-                                     utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding DiasClase, Mode=TwoWay}">
-                                <ListBox.Resources>
-                                    <Style TargetType="ListBoxItem">
-                                        <Setter Property="Background"
-                                                Value="White"/>
-                                        <Setter Property="Foreground"
-                                                Value="Black"/>
-                                        <Setter Property="HorizontalContentAlignment"
-                                                Value="Center"/>
-                                        <Setter Property="VerticalContentAlignment"
-                                                Value="Center"/>
-                                    </Style>
-                                </ListBox.Resources>
-                            </ListBox>
+                                SelectionMode="Multiple"
+                                utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding DiasClase, Mode=TwoWay}" />
                         </StackPanel>
-                        <StackPanel x:Name="txtTurnos"
-                                    Margin="10,0,20,0">
-                            <Label Content="Turno/s"
-                                   HorizontalAlignment="Left"/>
-                            <ListBox ItemsSource="{Binding TurnosList}"
-                                     SelectionMode="Multiple"
-                                     utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding Turnos, Mode=TwoWay}">
-                                <ListBox.Resources>
-                                    <Style TargetType="ListBoxItem">
-                                        <Setter Property="Background"
-                                                Value="White"/>
-                                        <Setter Property="Foreground"
-                                                Value="Black"/>
-                                        <Setter Property="HorizontalContentAlignment"
-                                                Value="Center"/>
-                                        <Setter Property="VerticalContentAlignment"
-                                                Value="Center"/>
-                                    </Style>
-                                </ListBox.Resources>
-                            </ListBox>
-                        </StackPanel>
-                    </WrapPanel>
+                        <Label Content="Turno/s" />
+                    <StackPanel x:Name="txtTurnos" HorizontalAlignment="Left" Width="390">
+                        <ListBox ItemsSource="{Binding TurnosList}"
+                                SelectionMode="Multiple"
+                                utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding Turnos, Mode=TwoWay}"/>
+                    </StackPanel>
+
                     <Button Content="Guardar"
                             Width="100"
                             Margin="10"

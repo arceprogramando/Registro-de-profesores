@@ -8,16 +8,37 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="622">
 
-    <UserControl.DataContext>
-        <viewmodels:ModificarVM/>
-    </UserControl.DataContext>
+    <UserControl.Resources>
+        <viewmodels:ProfesorViewModel x:Key="Profesores" />
+    </UserControl.Resources>
 
-    <Grid Background="#6e9aee">
+    <Grid DataContext="{Binding Source={StaticResource Profesores}}" Background="#6e9aee">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-        <TextBlock Text="En contrucción...">
-            
-        </TextBlock>
+        <TextBlock Name="Titulo"
+        Grid.Column="0"
+        Grid.Row="0"
+        Grid.ColumnSpan="2"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Center"
+        Text="Editar registros"
+        FontSize="24"
+        FontWeight="Bold"
+        Foreground="#000000"
+        TextWrapping="Wrap"
+        Padding="30,20"
+        TextAlignment="Center"/>
         
+        
+
     </Grid>
-    
+
 </UserControl>

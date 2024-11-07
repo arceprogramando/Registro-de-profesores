@@ -81,6 +81,7 @@ namespace TP2_GN.ViewModels
             {
                 try
                 {
+
                     dataBase.Add(Profesor); // Agrega el objeto a la base de datos
                     Profesores.Add(Profesor); // Agrega a la lista en memoria
 
@@ -114,15 +115,6 @@ namespace TP2_GN.ViewModels
             {
                 MessageBox.Show("El campo 'Apellido' es obligatorio.");
                 return false;
-            }
-            else
-            {
-                string patronEmail = @"^[^@\s]+@gmail\.com$";
-                if (!Regex.IsMatch(profesor.Email, patronEmail, RegexOptions.IgnoreCase))
-                {
-                    MessageBox.Show("El campo 'Email' debe ser una dirección válida de Gmail. (cuenta@email.com)");
-                    return false;
-                }
             }
 
             return true;
