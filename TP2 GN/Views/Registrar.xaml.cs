@@ -21,16 +21,11 @@ namespace TP2_GN.Views
 
     {
 
-
         public Registrar()
         {
             InitializeComponent();
             DataContext = new ProfesorViewModel();
         }
 
-        private void ListBox_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

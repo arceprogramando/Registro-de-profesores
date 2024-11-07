@@ -27,9 +27,8 @@ namespace TP2_GN.ViewModels
         public List<DiasSemanaEnum> DiasSemanaList { get; } = Enum.GetValues(typeof(DiasSemanaEnum)).Cast<DiasSemanaEnum>().ToList();
         public List<TurnosEnum> TurnosList { get; } = Enum.GetValues(typeof(TurnosEnum)).Cast<TurnosEnum>().ToList();
 
-        // Comandos para agregar, eliminar y actualizar profesores
+        // Comandos para agregar, listar, eliminar y actualizar profesores
         public ICommand AgregarCommand { get; }
-        public RelayCommand ListarProfesoresCommand { get; }
         public ICommand EliminarCommand { get; }
         public ICommand ActualizarCommand { get; }
         public ICommand ToggleSeleccionCommand { get; }
@@ -41,7 +40,6 @@ namespace TP2_GN.ViewModels
             dataBase = new DB();
             AgregarCommand = new RelayCommand(Agregar);
             EliminarCommand = new RelayCommand(Eliminar);
-            ListarProfesoresCommand = new RelayCommand(ListarProfesores);
             _profesor = new ProfesorModel();
             _profesores = dataBase.Get();
 
@@ -102,11 +100,6 @@ namespace TP2_GN.ViewModels
             }
         }
 
-        private void ListarProfesores()
-        {
-            Profesores = dataBase.Get(); // Actualiza la colección desde la base de datos
-            OnPropertyChanged(nameof(Profesores));
-        }
         private bool IsValidProfesor(ProfesorModel profesor)
         {
             if (profesor == null) return false;
@@ -120,18 +113,6 @@ namespace TP2_GN.ViewModels
             if (string.IsNullOrWhiteSpace(profesor.Apellido))
             {
                 MessageBox.Show("El campo 'Apellido' es obligatorio.");
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(profesor.Materia))
-            {
-                MessageBox.Show("El campo 'Materia' es obligatorio.");
-                return false;
-            }
-
-            if (string.IsNullOrEmpty(profesor.Email))
-            {
-                MessageBox.Show("El campo 'Email' es obligatorio.");
                 return false;
             }
             else
@@ -223,7 +204,6 @@ namespace TP2_GN.ViewModels
                 }
             }
         }
-
 
         public string Materia
         {
@@ -407,6 +387,8 @@ namespace TP2_GN.ViewModels
             }
         }
 
+        /*
+
         // Método para actualizar la información de un profesor
         private void Actualizar()
         {
@@ -419,6 +401,6 @@ namespace TP2_GN.ViewModels
         private bool CanEliminarProfesor() => Profesor != null && Profesor.Id > 0;
         private bool CanActualizarProfesor() => Profesor != null && Profesor.Id > 0;
 
-
+        */
     }
 }

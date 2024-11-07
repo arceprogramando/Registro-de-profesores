@@ -3,67 +3,115 @@
   "WorkspaceRootPath": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\romin\\desktop\\tp2.gn.pii\\tp2 gn\\viewmodels\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\romin\\desktop\\tp2.gn.pii\\tp2 gn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\views\\listar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\listar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\styles\\button.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\styles\\button.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\views\\registrar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\registrar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\database\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\database\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\views\\eliminar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\eliminar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\views\\modificar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\modificar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\viewmodels\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\profesorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\models\\profesormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\models\\profesormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\utilities\\datatemplate.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\datatemplate.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\views\\registrar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\registrar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\utilities\\btn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\btn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\utilities\\turnosenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\turnosenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\viewmodels\\listarvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\listarvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\utilities\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\viewmodels\\modificarvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\modificarvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\utilities\\diassemanaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\diassemanaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\viewmodels\\navegacionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\navegacionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|TP2 GN||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\viewmodels\\eliminarvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\eliminarvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\views\\registrar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\registrar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\views\\listar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\listar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\obj\\Debug\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TP2 GN\\obj\\Debug\\MainWindow.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\database\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\database\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\utilities\\diassemanaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\diassemanaenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\utilities\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\listboxselecteditemsbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\utilities\\turnosenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\utilities\\turnosenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|TP2 GN||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|C:\\Users\\romin\\Desktop\\TP2.GN.PII\\tp2 gn\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -97,173 +145,179 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "ProfesorModel.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Models\\ProfesorModel.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\Models\\ProfesorModel.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Models\\ProfesorModel.cs",
+              "RelativeToolTip": "TP2 GN\\Models\\ProfesorModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T14:43:23.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Modificar.xaml",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Modificar.xaml",
+              "RelativeDocumentMoniker": "TP2 GN\\Views\\Modificar.xaml",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Modificar.xaml",
+              "RelativeToolTip": "TP2 GN\\Views\\Modificar.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T05:50:17.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProfesorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ProfesorViewModel.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ProfesorViewModel.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ProfesorViewModel.cs",
+              "RelativeToolTip": "TP2 GN\\ViewModels\\ProfesorViewModel.cs",
+              "ViewState": "AgIAAIEBAAAAAAAAAADwv5MBAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T01:44:14.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Registrar.xaml",
               "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Registrar.xaml",
               "RelativeDocumentMoniker": "TP2 GN\\Views\\Registrar.xaml",
               "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Registrar.xaml",
               "RelativeToolTip": "TP2 GN\\Views\\Registrar.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-17T04:09:35.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T04:09:35.098Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DiasSemanaEnum.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\DiasSemanaEnum.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\DiasSemanaEnum.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\DiasSemanaEnum.cs",
-              "RelativeToolTip": "TP2 GN\\Utilities\\DiasSemanaEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T00:40:27.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TurnosEnum.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\TurnosEnum.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\TurnosEnum.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\TurnosEnum.cs",
-              "RelativeToolTip": "TP2 GN\\Utilities\\TurnosEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T06:06:53.466Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\MainWindow.xaml",
               "RelativeDocumentMoniker": "TP2 GN\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\MainWindow.xaml",
               "RelativeToolTip": "TP2 GN\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-05T14:39:27.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProfesorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ProfesorViewModel.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ProfesorViewModel.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ProfesorViewModel.cs",
-              "RelativeToolTip": "TP2 GN\\ViewModels\\ProfesorViewModel.cs",
-              "ViewState": "AgIAAIoBAAAAAAAAAAAzwIgBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T01:44:14.003Z",
+              "WhenOpened": "2024-10-05T14:39:27.185Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Btn.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\Btn.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\Btn.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\Btn.cs",
+              "RelativeToolTip": "TP2 GN\\Utilities\\Btn.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T02:45:40.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Eliminar.xaml",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Eliminar.xaml",
+              "RelativeDocumentMoniker": "TP2 GN\\Views\\Eliminar.xaml",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Eliminar.xaml",
+              "RelativeToolTip": "TP2 GN\\Views\\Eliminar.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T05:50:25.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Button.xaml",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Styles\\Button.xaml",
+              "RelativeDocumentMoniker": "TP2 GN\\Styles\\Button.xaml",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Styles\\Button.xaml",
+              "RelativeToolTip": "TP2 GN\\Styles\\Button.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T02:56:58.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Listar.xaml",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Listar.xaml",
+              "RelativeDocumentMoniker": "TP2 GN\\Views\\Listar.xaml",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Listar.xaml",
+              "RelativeToolTip": "TP2 GN\\Views\\Listar.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T05:50:09.657Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ListBoxSelectedItemsBehavior.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
-              "RelativeToolTip": "TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:19:28.766Z"
+              "Title": "DataTemplate.xaml",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\DataTemplate.xaml",
+              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\DataTemplate.xaml",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\DataTemplate.xaml",
+              "RelativeToolTip": "TP2 GN\\Utilities\\DataTemplate.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T02:45:10.55Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ViewModelBase.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ViewModelBase.cs",
-              "RelativeToolTip": "TP2 GN\\ViewModels\\ViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "ListarVM.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ListarVM.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ListarVM.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ListarVM.cs",
+              "RelativeToolTip": "TP2 GN\\ViewModels\\ListarVM.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T01:41:35.381Z"
+              "WhenOpened": "2024-11-06T19:42:41.286Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
+              "Title": "ModificarVM.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ModificarVM.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ModificarVM.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ModificarVM.cs",
+              "RelativeToolTip": "TP2 GN\\ViewModels\\ModificarVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T20:36:32.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Registrar.xaml.cs",
               "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Registrar.xaml.cs",
               "RelativeDocumentMoniker": "TP2 GN\\Views\\Registrar.xaml.cs",
               "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Registrar.xaml.cs",
               "RelativeToolTip": "TP2 GN\\Views\\Registrar.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowBgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwBkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T04:16:03.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Commands\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\Commands\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Commands\\RelayCommand.cs",
-              "RelativeToolTip": "TP2 GN\\Commands\\RelayCommand.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAwwCkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T18:02:26.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DB.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\DataBase\\DB.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\DataBase\\DB.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\DataBase\\DB.cs",
-              "RelativeToolTip": "TP2 GN\\DataBase\\DB.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAnwLsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T21:55:45.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\App.config",
-              "RelativeDocumentMoniker": "TP2 GN\\App.config",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\App.config",
-              "RelativeToolTip": "TP2 GN\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-17T04:35:29.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "packages.config",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\packages.config",
-              "RelativeDocumentMoniker": "TP2 GN\\packages.config",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\packages.config",
-              "RelativeToolTip": "TP2 GN\\packages.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-25T21:58:50.585Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\App.xaml.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\App.xaml.cs",
-              "RelativeToolTip": "TP2 GN\\App.xaml.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAADwvxMAAAAMAAAAAAAAAA==",
+              "Title": "NavegacionVM.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\NavegacionVM.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\NavegacionVM.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\NavegacionVM.cs",
+              "RelativeToolTip": "TP2 GN\\ViewModels\\NavegacionVM.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAA7wDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T04:45:28.179Z"
+              "WhenOpened": "2024-11-06T04:53:46.449Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\MainWindow.xaml.cs",
-              "RelativeToolTip": "TP2 GN\\MainWindow.xaml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAADwvxwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "EliminarVM.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\EliminarVM.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\EliminarVM.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\EliminarVM.cs",
+              "RelativeToolTip": "TP2 GN\\ViewModels\\EliminarVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T18:25:21.53Z"
+              "WhenOpened": "2024-11-06T20:39:18.862Z"
             },
             {
               "$type": "Document",
@@ -279,19 +333,151 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProfesorModel.cs",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Models\\ProfesorModel.cs",
-              "RelativeDocumentMoniker": "TP2 GN\\Models\\ProfesorModel.cs",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Models\\ProfesorModel.cs",
-              "RelativeToolTip": "TP2 GN\\Models\\ProfesorModel.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAkwE8AAAAYAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\MainWindow.xaml.cs",
+              "RelativeToolTip": "TP2 GN\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T14:43:23.314Z"
+              "WhenOpened": "2024-10-08T18:25:21.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\ViewModels\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "TP2 GN\\ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T01:41:35.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\App.xaml.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\App.xaml.cs",
+              "RelativeToolTip": "TP2 GN\\App.xaml.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvxQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T04:45:28.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Listar.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Listar.xaml.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\Views\\Listar.xaml.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Views\\Listar.xaml.cs",
+              "RelativeToolTip": "TP2 GN\\Views\\Listar.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T19:58:15.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MainWindow.g.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\obj\\Debug\\MainWindow.g.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\obj\\Debug\\MainWindow.g.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\obj\\Debug\\MainWindow.g.cs",
+              "RelativeToolTip": "TP2 GN\\obj\\Debug\\MainWindow.g.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T06:16:47.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TurnosEnum.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\TurnosEnum.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\TurnosEnum.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\TurnosEnum.cs",
+              "RelativeToolTip": "TP2 GN\\Utilities\\TurnosEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T06:06:53.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DiasSemanaEnum.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\DiasSemanaEnum.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\DiasSemanaEnum.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\DiasSemanaEnum.cs",
+              "RelativeToolTip": "TP2 GN\\Utilities\\DiasSemanaEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T00:40:27.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ListBoxSelectedItemsBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
+              "RelativeToolTip": "TP2 GN\\Utilities\\ListBoxSelectedItemsBehavior.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T15:19:28.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Commands\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\Commands\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Commands\\RelayCommand.cs",
+              "RelativeToolTip": "TP2 GN\\Commands\\RelayCommand.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAswA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T18:02:26.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DB.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\DataBase\\DB.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\DataBase\\DB.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\DataBase\\DB.cs",
+              "RelativeToolTip": "TP2 GN\\DataBase\\DB.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAewDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T21:55:45.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\App.config",
+              "RelativeDocumentMoniker": "TP2 GN\\App.config",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\App.config",
+              "RelativeToolTip": "TP2 GN\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-17T04:35:29.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\packages.config",
+              "RelativeDocumentMoniker": "TP2 GN\\packages.config",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\packages.config",
+              "RelativeToolTip": "TP2 GN\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-10-25T21:58:50.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "TP2 GN",
               "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\TP2 GN.csproj",
               "RelativeDocumentMoniker": "TP2 GN\\TP2 GN.csproj",
@@ -302,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 29,
               "Title": "Settings.settings",
               "DocumentMoniker": "C:\\Users\\romin\\Desktop\\TP2.GN.PII\\TP2 GN\\Properties\\Settings.settings",
               "RelativeDocumentMoniker": "TP2 GN\\Properties\\Settings.settings",

@@ -4,20 +4,101 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TP2_GN"
+        xmlns:Menu="clr-namespace:TP2_GN.Utilities"
+        xmlns:viewmodels="clr-namespace:TP2_GN.ViewModels"
         xmlns:views="clr-namespace:TP2_GN.Views"
-        xmlns:viewModels="clr-namespace:TP2_GN.ViewModels"
         mc:Ignorable="d"
-        Title="Registro de profesores" Height="700" Width="1300" >
+        Title="Registro de profesores" Height="600" Width="850"
+        WindowStartupLocation="CenterScreen" >
 
     <Window.DataContext>
-        <viewModels:ProfesorViewModel/>
+        <viewmodels:NavegacionVM/>
     </Window.DataContext>
 
-    <Grid Background="#6e9aee" >
+    <Grid Background="#d0e8ff">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="41*"/>
+        </Grid.ColumnDefinitions>
 
-        <views:Registrar/>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="154"/>
+                <ColumnDefinition Width="696"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- // Panel de navegación // -->
+            <Grid HorizontalAlignment="Center" 
+                  Width="150">
+
+                <Border Background="#88adf3" Margin="-4,0,-7,0" />
+
+                <StackPanel Height="400"
+                        Width="228">
+
+                    <!-- // Registrar // -->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                               Command="{Binding MostrarRegistrarViewCommand}"
+                               IsChecked="True">
+
+                        <Grid>
+                            <TextBlock Text="Registrar" />
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!-- // Listar // -->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                               Command="{Binding MostrarListarViewCommand}"
+                               IsChecked="True">
+
+                        <Grid>
+                            <TextBlock Text="Listar" />
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!-- // Modificar // -->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                               Command="{Binding MostrarModificarViewCommand}"
+                               IsChecked="True">
+
+                        <Grid>
+                            <TextBlock Text="Modificar" />
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!-- // Eliminar // -->
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                               Command="{Binding MostrarEliminarViewCommand}"
+                               IsChecked="True">
+
+                        <Grid>
+                            <TextBlock Text="Eliminar" />
+                        </Grid>
+
+                    </Menu:Btn>
+
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="111*"/>
+                    <RowDefinition Height="170*"/>
+                    <RowDefinition Height="229*"/>
+                    <RowDefinition Height="74*"/>
+                </Grid.RowDefinitions>
+
+                <ContentControl x:Name="Pages"
+                                Content="{Binding VistaActual}" Grid.RowSpan="4" HorizontalAlignment="Center" Width="698" />
+
+            </Grid>
+
+
+        </Grid>
 
     </Grid>
-
 
 </Window>

@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="TP2_GN.Views.Modificar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TP2_GN.Views"
+             xmlns:viewmodels="clr-namespace:TP2_GN.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="622">
+
+    <UserControl.DataContext>
+        <viewmodels:ModificarVM/>
+    </UserControl.DataContext>
+
+    <Grid Background="#6e9aee">
+
+        <TextBlock Text="En contrucción...">
+            
+        </TextBlock>
+        
+    </Grid>
+    
+</UserControl>

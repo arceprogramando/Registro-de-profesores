@@ -28,57 +28,6 @@ C:\Users\romin\Desktop\repo_nahuel\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.Gen
 C:\Users\romin\Desktop\repo_nahuel\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.CoreCompileInputs.cache
 C:\Users\romin\Desktop\repo_nahuel\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.exe
 C:\Users\romin\Desktop\repo_nahuel\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.pdb
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\TP2 GN.exe.config
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\TP2 GN.exe
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\TP2 GN.pdb
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\BouncyCastle.Cryptography.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Google.Protobuf.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Compression.LZ4.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Hash.xxHash.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\MySql.Data.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Buffers.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Configuration.ConfigurationManager.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.IO.Pipelines.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Memory.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\ZstdSharp.dll
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\BouncyCastle.Cryptography.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Google.Protobuf.pdb
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Google.Protobuf.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Compression.LZ4.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Compression.LZ4.Streams.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Hash.xxHash.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\MySql.Data.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Buffers.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Configuration.ConfigurationManager.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.IO.Pipelines.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Memory.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.AssemblyReference.cache
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\MainWindow.g.cs
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Registrar.g.cs
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\App.g.cs
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN_MarkupCompile.cache
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN_MarkupCompile.lref
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\MainWindow.baml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Registrar.baml
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.g.resources
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2_GN.Properties.Resources.resources
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.GenerateResource.cache
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.CoreCompileInputs.cache
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.Up2Date
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.exe
-C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.pdb
 C:\Users\arcep\OneDrive\Desktop\ProyectoUTN\TP2 GN\bin\Debug\TP2 GN.exe.config
 C:\Users\arcep\OneDrive\Desktop\ProyectoUTN\TP2 GN\bin\Debug\TP2 GN.exe
 C:\Users\arcep\OneDrive\Desktop\ProyectoUTN\TP2 GN\bin\Debug\TP2 GN.pdb
@@ -130,3 +79,63 @@ C:\Users\arcep\OneDrive\Desktop\ProyectoUTN\TP2 GN\obj\Debug\TP2 GN.csproj.CoreC
 C:\Users\arcep\OneDrive\Desktop\ProyectoUTN\TP2 GN\obj\Debug\TP2 GN.csproj.Up2Date
 C:\Users\arcep\OneDrive\Desktop\ProyectoUTN\TP2 GN\obj\Debug\TP2 GN.exe
 C:\Users\arcep\OneDrive\Desktop\ProyectoUTN\TP2 GN\obj\Debug\TP2 GN.pdb
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\TP2 GN.exe.config
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\TP2 GN.exe
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\TP2 GN.pdb
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Google.Protobuf.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\MySql.Data.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Buffers.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.IO.Pipelines.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Memory.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\ZstdSharp.dll
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Google.Protobuf.pdb
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Google.Protobuf.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\MySql.Data.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Buffers.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.IO.Pipelines.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Memory.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.AssemblyReference.cache
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Styles\Button.baml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\MainWindow.g.cs
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Eliminar.g.cs
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Listar.g.cs
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Modificar.g.cs
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Registrar.g.cs
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\App.g.cs
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN_MarkupCompile.cache
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN_MarkupCompile.lref
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\App.baml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\MainWindow.baml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Utilities\DataTemplate.baml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Eliminar.baml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Listar.baml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Modificar.baml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\Views\Registrar.baml
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.g.resources
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2_GN.Properties.Resources.resources
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.GenerateResource.cache
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.CoreCompileInputs.cache
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.csproj.Up2Date
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.exe
+C:\Users\romin\Desktop\TP2.GN.PII\TP2 GN\obj\Debug\TP2 GN.pdb

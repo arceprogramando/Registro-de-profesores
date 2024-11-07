@@ -24,7 +24,7 @@ namespace TP2_GN
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new ProfesorViewModel();
+            DataContext = new NavegacionVM();
         }
 
     }

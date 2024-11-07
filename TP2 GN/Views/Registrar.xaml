@@ -7,12 +7,13 @@
              xmlns:viewmodels="clr-namespace:TP2_GN.ViewModels"
              xmlns:utilities="clr-namespace:TP2_GN.Utilities"
              mc:Ignorable="d"
-             d:DesignHeight="700"
-             d:DesignWidth="1300">
+             d:DesignHeight="600" d:DesignWidth="622">
+    
     <UserControl.Resources>
         <viewmodels:ProfesorViewModel x:Key="Profesores"/>
     </UserControl.Resources>
-    <Grid DataContext="{Binding Source={StaticResource Profesores}}">
+
+    <Grid DataContext="{Binding Source={StaticResource Profesores}}" Background="#6e9aee">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -22,7 +23,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        
+
         <TextBlock Name="Titulo"
                    Grid.Column="0"
                    Grid.Row="0"
@@ -44,16 +45,11 @@
                 BorderThickness="1.5"
                 BorderBrush="DarkSlateBlue"
                 Padding="30"
-                MaxWidth="540">
+                MaxWidth="540" Grid.ColumnSpan="2">
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Auto">
                 <StackPanel>
-                    <TextBlock Text="Consulta de Profesores"
-                               FontSize="20"
-                               FontWeight="Bold"
-                               Foreground="#000000"
-                               TextAlignment="Center"
-                               Margin="0,0,0,20"/>
+                   
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -70,7 +66,6 @@
                                      Padding="4"
                                      Text="{Binding Profesor.Nombre, UpdateSourceTrigger=PropertyChanged}"
                                      Width="160"
-                                     VerticalAlignment="Center"
                                      BorderBrush="#6497B1"
                                      BorderThickness="2"/>
                         </StackPanel>
@@ -253,7 +248,6 @@
                                                 Value="Center"/>
                                         <Setter Property="VerticalContentAlignment"
                                                 Value="Center"/>
-
                                     </Style>
                                 </ListBox.Resources>
                             </ListBox>
@@ -267,53 +261,7 @@
                 </StackPanel>
             </ScrollViewer>
         </Border>
-        
-        
-        <Border Name="Consulta"
-                Grid.Column="2"
-                Grid.Row="1"
-                Background="#d0e8ff"
-                CornerRadius="5"
-                BorderThickness="1.5"
-                BorderBrush="DarkSlateBlue"
-                Padding="30"
-                MaxWidth="540">
-            <ScrollViewer VerticalScrollBarVisibility="Auto"
-                          HorizontalScrollBarVisibility="Auto">
-                <StackPanel>
-                    <Label Content="Resultados:"/>
-                    <ListBox ItemsSource="{Binding Profesores}"
-                             SelectedItem="{Binding Profesor}"
-                             Margin="0,5,0,0"
-                             BorderThickness="2">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="ID: "/>
-                                    <TextBlock Text= "{Binding Id}" />
-                                    <TextBlock Text=" | "/>
-                                    <TextBlock Text="{Binding Nombre}"/>
-                                    <TextBlock Text=" "/>
-                                    <TextBlock Text="{Binding Apellido}"/>
-                                    <TextBlock Text=" | "/>
-                                    <TextBlock Text="{Binding Email}"/>
-                                    <TextBlock Text=" - "/>
-                                    <TextBlock Text="{Binding Materia}"/>
-                                    <TextBlock Text=" - "/>
-                                    <TextBlock Text="{Binding NroCelular}"/>
-                                    <TextBlock Text=" "/>
-                                    <Button Content="Eliminar" HorizontalAlignment="Right"
-                                     Command="{Binding DataContext.EliminarCommand, 
-                                        RelativeSource={RelativeSource AncestorType=ListBox}}" />
 
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-            </ScrollViewer>
-        </Border>
-        
         <!-- pie -->
         <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
             <TextBlock

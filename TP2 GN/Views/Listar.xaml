@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="TP2_GN.Views.Listar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TP2_GN.Views"
+             xmlns:viewmodels="clr-namespace:TP2_GN.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="622">
+
+    <UserControl.Resources>
+        <viewmodels:ProfesorViewModel x:Key="Profesores"/>
+    </UserControl.Resources>
+
+    <Grid DataContext="{Binding Source={StaticResource Profesores}}" Background="#6e9aee">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="Titulo"
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Text="Lista de registros"
+            FontSize="24"
+            FontWeight="Bold"
+            Foreground="#000000"
+            TextWrapping="Wrap"
+            Padding="30,20"
+            TextAlignment="Center"/>
+
+        <Border Name="Consulta"
+            Grid.Row="1"
+            Background="#d0e8ff"
+            CornerRadius="5"
+            BorderThickness="1.5"
+            BorderBrush="DarkSlateBlue"
+            Padding="30"
+            MaxWidth="540" Grid.ColumnSpan="2" Margin="1,0,0,0">
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto"
+           HorizontalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Label Content="Resultados:"/>
+                    <ListBox ItemsSource="{Binding Profesores}"
+              SelectedItem="{Binding Profesor}"
+              Margin="0,5,0,0"
+              BorderThickness="2">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    
+                                    <TextBlock Text="{Binding Nombre}"/>
+                                    <TextBlock Text=" "/>
+                                    <TextBlock Text="{Binding Apellido}"/>
+                                    <TextBlock Text=" | "/>
+                                    <TextBlock Text=" Materia que dicta: " />
+                                    <TextBlock Text="{Binding Materia}"/>
+                                    <TextBlock Text=" - Categoría: "/>
+                                    <TextBlock Text="{Binding NivelEnsenanza}"/>
+                                    <TextBlock Text=" "/>
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <!-- pie -->
+        <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+            <TextBlock Text="« Universidad Tecnológica Nacional »"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="14"
+                       Foreground="Black"
+                       Margin="20,10,20,10"/>
+        </Border>
+    </Grid>
+
+</UserControl>

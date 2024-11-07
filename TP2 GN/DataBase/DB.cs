@@ -52,7 +52,7 @@ namespace TP2_GN.DataBase
 
                         // Parsear y convertir DiasClase a una lista de enums
                         DiasClase = reader["DIAS_CLASES"] != DBNull.Value
-                        ? ((string)reader["DIAS_CLASES"]).Split(',') // Dividir por comas
+                        ? ((string)reader["DIAS_CLASES"]).Split(',') 
                             .Select(dia =>
                             {
                                 // Intentar parsear cada día
@@ -103,10 +103,10 @@ namespace TP2_GN.DataBase
 
         internal void Add(ProfesorModel model)
         {
-            string query = "INSERT INTO profesores (nombre, apellido, domicilio, localidad, provincia, nro_contacto, email," +
-                    "categoria, nivel_ensenanza, materia, dias_clases, turnos) VALUES(@Nombre, @Apellido, @Domicilio," +
-                    "@Localidad, @Provincia, @Nro_contacto, @Email, @Categoria, @Nivel_ensenanza, @Materia, " +
-                    "@Dias_clases, @Turnos)";
+            string query = "INSERT INTO profesores (nombre, apellido, domicilio, localidad, provincia, nro_contacto," +
+                " email,categoria, nivel_ensenanza, materia, dias_clases, turnos)" +
+                " VALUES(@Nombre, @Apellido, @Domicilio, @Localidad, @Provincia, @Nro_contacto," +
+                " @Email, @Categoria, @Nivel_ensenanza, @Materia, @Dias_clases, @Turnos)";
 
             try
             {
