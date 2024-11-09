@@ -16,33 +16,22 @@
     </Window.DataContext>
 
     <Grid Background="#d0e8ff">
-
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="153*"/>
-            <ColumnDefinition Width="530*"/>
-            <ColumnDefinition Width="167*"/>
-            <ColumnDefinition Width="0*"/>
+            <!-- Ancho fijo para el panel de navegación -->
+            <ColumnDefinition Width="150"/>
+            <!-- Segunda columna que ocupa el espacio restante -->
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.ColumnSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="154"/>
-                <ColumnDefinition Width="696"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- // Panel de navegación // -->
-            <Grid HorizontalAlignment="Center" 
-                  Width="150">
-
-                <Border Background="#88adf3" Margin="-4,0,-7,0" />
-
-                <StackPanel Height="400"
-                        Width="228">
+        <!-- Panel de navegación en la primera columna -->
+        <Grid Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Border Background="#88adf3" Margin="0"/>
+                <StackPanel Height="400" Width="150">
 
                     <!-- // Registrar // -->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                               Command="{Binding MostrarRegistrarViewCommand}"
-                               IsChecked="True">
+                              Command="{Binding MostrarRegistrarViewCommand}"
+                              IsChecked="True">
 
                         <Grid>
                             <TextBlock Text="Registrar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
@@ -51,11 +40,11 @@
                     </Menu:Btn>
 
                     <!-- // Listar // -->
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                               Command="{Binding MostrarListarViewCommand}"
-                               IsChecked="True">
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                          Command="{Binding MostrarListarViewCommand}"
+                          IsChecked="True">
 
-                        <Grid>
+                    <Grid>
                             <TextBlock Text="Listar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
                         </Grid>
 
@@ -63,8 +52,8 @@
 
                     <!-- // Modificar // -->
                     <Menu:Btn Style="{StaticResource BtnStyle}"
-                               Command="{Binding MostrarModificarViewCommand}"
-                               IsChecked="True">
+                              Command="{Binding MostrarModificarViewCommand}"
+                              IsChecked="True">
 
                         <Grid>
                             <TextBlock Text="Modificar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
@@ -73,34 +62,24 @@
                     </Menu:Btn>
 
                     <!-- // Eliminar // -->
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
-                               Command="{Binding MostrarEliminarViewCommand}"
-                               IsChecked="True">
+                <Menu:Btn Style="{StaticResource BtnStyle}"
+                          Command="{Binding MostrarEliminarViewCommand}"
+                          IsChecked="True">
 
-                        <Grid>
-                            <TextBlock Text="Eliminar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
-                        </Grid>
+                    <Grid>
+                        <TextBlock Text="Eliminar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
+                    </Grid>
 
-                    </Menu:Btn>
+                </Menu:Btn>
 
-                </StackPanel>
-            </Grid>
-
-            <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <ContentControl x:Name="Pages"
-                    Content="{Binding VistaActual}"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch" />
-            </Grid>
-
-
-
+            </StackPanel>
         </Grid>
 
+        <!-- Área de contenido principal en la segunda columna -->
+        <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <ContentControl x:Name="Pages" Content="{Binding VistaActual}" />
+        </Grid>
     </Grid>
+
 
 </Window>

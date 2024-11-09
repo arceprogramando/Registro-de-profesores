@@ -24,8 +24,6 @@
         </Grid.RowDefinitions>
 
         <TextBlock Name="Titulo"
-            Grid.Column="0"
-            Grid.Row="0"
             Grid.ColumnSpan="2"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
@@ -33,7 +31,6 @@
             FontSize="24"
             FontWeight="Bold"
             Foreground="#000000"
-            TextWrapping="Wrap"
             Padding="30,20"
             TextAlignment="Center"/>
 
