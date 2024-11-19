@@ -18,7 +18,7 @@
     <Grid Background="#d0e8ff">
         <Grid.ColumnDefinitions>
             <!-- Ancho fijo para el panel de navegación -->
-            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="156"/>
             <!-- Segunda columna que ocupa el espacio restante -->
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>

@@ -209,15 +209,19 @@
 
                         <Label Content="Días que imparte clases" />
                     <StackPanel x:Name="txtDiasClase" HorizontalAlignment="Left" Width="390">
-                            <ListBox ItemsSource="{Binding DiasSemanaList}"
-                                SelectionMode="Multiple"
-                                utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding DiasClase, Mode=TwoWay}" />
+                        <ListBox ItemsSource="{Binding DiasSemanaList}" Background="#d0e8ff"
+                                     SelectionMode="Multiple"
+                                     HorizontalContentAlignment="Center"
+                                     Padding="5"
+                                     utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding DiasClase, Mode=TwoWay}" />
                         </StackPanel>
                         <Label Content="Turno/s" />
                     <StackPanel x:Name="txtTurnos" HorizontalAlignment="Left" Width="390">
-                        <ListBox ItemsSource="{Binding TurnosList}"
-                                SelectionMode="Multiple"
-                                utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding Turnos, Mode=TwoWay}"/>
+                        <ListBox ItemsSource="{Binding TurnosList}" Background="#d0e8ff"
+                                     SelectionMode="Multiple"
+                                     HorizontalContentAlignment="Center"
+                                     Padding="5"
+                                     utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding Turnos, Mode=TwoWay}"/>
                     </StackPanel>
 
                     <Button Content="Guardar"
