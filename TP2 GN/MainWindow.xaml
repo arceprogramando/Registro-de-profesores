@@ -26,42 +26,42 @@
         <!-- Panel de navegación en la primera columna -->
         <Grid Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <Border Background="#88adf3" Margin="0"/>
-                <StackPanel Height="400" Width="150">
+            <StackPanel Height="400" Width="150">
 
-                    <!-- // Registrar // -->
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                <!-- // Registrar // -->
+                <Menu:Btn Style="{StaticResource BtnStyle}"
                               Command="{Binding MostrarRegistrarViewCommand}"
                               IsChecked="True">
 
-                        <Grid>
-                            <TextBlock Text="Registrar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
-                        </Grid>
+                    <Grid>
+                        <TextBlock Text="Registrar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
+                    </Grid>
 
-                    </Menu:Btn>
+                </Menu:Btn>
 
-                    <!-- // Listar // -->
+                <!-- // Listar // -->
                 <Menu:Btn Style="{StaticResource BtnStyle}"
                           Command="{Binding MostrarListarViewCommand}"
                           IsChecked="True">
 
                     <Grid>
-                            <TextBlock Text="Listar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
-                        </Grid>
+                        <TextBlock Text="Listar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
+                    </Grid>
 
-                    </Menu:Btn>
+                </Menu:Btn>
 
-                    <!-- // Modificar // -->
-                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                <!-- // Modificar // -->
+                <Menu:Btn Style="{StaticResource BtnStyle}"
                               Command="{Binding MostrarModificarViewCommand}"
                               IsChecked="True">
 
-                        <Grid>
-                            <TextBlock Text="Modificar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
-                        </Grid>
+                    <Grid>
+                        <TextBlock Text="Modificar" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
+                    </Grid>
 
-                    </Menu:Btn>
+                </Menu:Btn>
 
-                    <!-- // Eliminar // -->
+                <!-- // Eliminar // -->
                 <Menu:Btn Style="{StaticResource BtnStyle}"
                           Command="{Binding MostrarEliminarViewCommand}"
                           IsChecked="True">
@@ -73,10 +73,28 @@
                 </Menu:Btn>
 
             </StackPanel>
+
         </Grid>
 
         <!-- Área de contenido principal en la segunda columna -->
         <Grid Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+            <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+                <TextBlock
+              Text="« Universidad Tecnológica Nacional »"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Top"
+              FontSize="18"
+              Foreground="Black"
+              Margin="20,10,20,10"/>
+            </Border>
+
+            <Image Source="/images/utn.png"  Height="85" Width="98" HorizontalAlignment="Right" VerticalAlignment="Top"
+                   Margin="20"></Image>
+            <Image Source="/images/sims.png"  Height="398" Width="456" HorizontalAlignment="Center" ></Image>
+            <Image Source="/images/sim1f.png"  Height="350" Width="480" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Image>
+            <Image Source="/images/sim2f.png"  Height="350" Width="480" HorizontalAlignment="Left" VerticalAlignment="Bottom"></Image>
+
             <ContentControl x:Name="Pages" Content="{Binding VistaActual}" />
         </Grid>
     </Grid>

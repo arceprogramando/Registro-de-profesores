@@ -41,7 +41,7 @@
                  BorderThickness="1.5"
                  BorderBrush="DarkSlateBlue"
                  Padding="30"
-                 MaxWidth="540" Grid.ColumnSpan="2" Margin="1,0,0,0">
+                 MaxWidth="780" Grid.ColumnSpan="2" Margin="1,0,0,0">
 
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Auto">

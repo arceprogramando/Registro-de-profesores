@@ -43,7 +43,7 @@
                 BorderThickness="1.5"
                 BorderBrush="DarkSlateBlue"
                 Padding="30"
-                MaxWidth="540" Grid.ColumnSpan="2">
+                MaxWidth="780" Grid.ColumnSpan="2">
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Auto">
                 <StackPanel>
@@ -55,7 +55,7 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0"
                                     VerticalAlignment="Top"
-                                    HorizontalAlignment="Left">
+                                    HorizontalAlignment="Center">
                             <TextBlock Text="Nombre/s"
                                        VerticalAlignment="Bottom"
                                        Margin="0,0,0,8"/>
@@ -69,7 +69,7 @@
                         </StackPanel>
                         <StackPanel Grid.Column="1"
                                     VerticalAlignment="Top"
-                                    HorizontalAlignment="Left">
+                                    HorizontalAlignment="Center">
                             <TextBlock Text="Apellido"
                                        VerticalAlignment="Bottom"
                                        Margin="0,0,0,8"/>
@@ -85,7 +85,7 @@
                     </Grid>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
-                                HorizontalAlignment="Left">
+                                HorizontalAlignment="Center">
                         <Label Content="Domicilio"/>
                         <TextBox x:Name="txtDomicilio"
                                  HorizontalAlignment="Stretch"
@@ -104,7 +104,7 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0"
                                     VerticalAlignment="Top"
-                                    HorizontalAlignment="Left">
+                                    HorizontalAlignment="Center">
                             <Label Content="Provincia"/>
                             <ComboBox x:Name="cbxProvincia"
                                       HorizontalAlignment="Stretch"
@@ -120,7 +120,7 @@
                         </StackPanel>
                         <StackPanel Grid.Column="1"
                                     VerticalAlignment="Top"
-                                    HorizontalAlignment="Left">
+                                    HorizontalAlignment="Center">
                             <Label Content="Localidad"/>
                             <TextBox x:Name="txtLocalidad"
                                      HorizontalAlignment="Stretch"
@@ -135,7 +135,7 @@
                     </Grid>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
-                                HorizontalAlignment="Left">
+                                HorizontalAlignment="Center">
                         <Label Content="Nro. de celular"/>
                         <TextBox x:Name="txtCelular"
                                  HorizontalAlignment="Stretch"
@@ -149,7 +149,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
-                                HorizontalAlignment="Left">
+                                HorizontalAlignment="Center">
                         <Label Content="Correo Electrónico"/>
                         <TextBox x:Name="txtEmail"
                                  HorizontalAlignment="Stretch"
@@ -163,7 +163,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
-                                HorizontalAlignment="Left">
+                                HorizontalAlignment="Center">
                         <Label Content="Categoría"/>
                         <ComboBox x:Name="cbxCategoria"
                                   HorizontalAlignment="Stretch"
@@ -179,7 +179,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
-                                HorizontalAlignment="Left">
+                                HorizontalAlignment="Center">
                         <Label Content="Materias que dicta"/>
                         <TextBox x:Name="txtMateria"
                                  HorizontalAlignment="Stretch"
@@ -192,7 +192,7 @@
                     </StackPanel>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
-                                HorizontalAlignment="Left">
+                                HorizontalAlignment="Center">
                         <Label Content="Nivel de enseñanza"/>
                         <ComboBox x:Name="cbxNivelEnsenanza"
                                   HorizontalAlignment="Stretch"
@@ -208,7 +208,7 @@
                     </StackPanel>
 
                         <Label Content="Días que imparte clases" />
-                    <StackPanel x:Name="txtDiasClase" HorizontalAlignment="Left" Width="390">
+                    <StackPanel x:Name="txtDiasClase" HorizontalAlignment="Center" Width="390">
                         <ListBox ItemsSource="{Binding DiasSemanaList}" Background="#d0e8ff"
                                      SelectionMode="Multiple"
                                      HorizontalContentAlignment="Center"
@@ -216,7 +216,7 @@
                                      utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding DiasClase, Mode=TwoWay}" />
                         </StackPanel>
                         <Label Content="Turno/s" />
-                    <StackPanel x:Name="txtTurnos" HorizontalAlignment="Left" Width="390">
+                    <StackPanel x:Name="txtTurnos" HorizontalAlignment="Center" Width="390">
                         <ListBox ItemsSource="{Binding TurnosList}" Background="#d0e8ff"
                                      SelectionMode="Multiple"
                                      HorizontalContentAlignment="Center"

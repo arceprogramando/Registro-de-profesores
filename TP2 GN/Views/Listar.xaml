@@ -41,7 +41,7 @@
             BorderThickness="1.5"
             BorderBrush="DarkSlateBlue"
             Padding="30"
-            MaxWidth="540" Grid.ColumnSpan="2" Margin="1,0,0,0">
+            MaxWidth="780" Grid.ColumnSpan="2" Margin="1,0,0,0">
 
             <ScrollViewer VerticalScrollBarVisibility="Auto"
            HorizontalScrollBarVisibility="Auto">
@@ -53,8 +53,8 @@
               BorderThickness="2">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    
+                                <StackPanel Orientation="Horizontal" >
+
                                     <TextBlock Text="{Binding Nombre}"/>
                                     <TextBlock Text=" "/>
                                     <TextBlock Text="{Binding Apellido}"/>
@@ -63,7 +63,21 @@
                                     <TextBlock Text="{Binding Materia}"/>
                                     <TextBlock Text=" - Categoría: "/>
                                     <TextBlock Text="{Binding NivelEnsenanza}"/>
-                                    <TextBlock Text=" "/>
+                                    <TextBlock Text=" " />
+
+                                    <!-- Icon by Kemalmoe -->
+                                    <Button Command="{Binding DataContext.MostrarEliminarViewCommand, 
+                              RelativeSource={RelativeSource AncestorType=Window}}" >
+                                        <Image Source="/images/trash_png.png" Height="10" Width="11"/>
+                                    </Button>
+
+                                    <TextBlock Text="  "/>
+
+                                    <Button Command="{Binding DataContext.MostrarModificarViewCommand,
+                              RelativeSource={RelativeSource AncestorType=Window}}" >
+                                        <Image Source="/images/edit_icon.png" Height="10" Width="11"  />
+                                    </Button>
+
 
                                 </StackPanel>
                             </DataTemplate>

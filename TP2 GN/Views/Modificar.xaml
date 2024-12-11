@@ -14,14 +14,37 @@
 
     <Grid Background="#d0e8ff">
 
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
-            <TextBlock x:Name="Titulo"
-                   Text="Editar registros"
-                   FontSize="24"
-                   FontWeight="Bold"
-                   Foreground="#000000"
-                   Padding="30,20"/>
-        </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock x:Name="Titulo"
+                        Grid.ColumnSpan="2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Text="Editar registros"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        Foreground="#000000"
+                        Padding="30,20"
+                        TextAlignment="Center"/>
+        <Label Content="Buscar por ID: " 
+               FontSize="14"
+               FontWeight="Bold"
+               HorizontalAlignment="Left" 
+               Margin="110,58,0,0" 
+               Grid.Row="1" 
+               VerticalAlignment="Top" Height="30" Width="130"/>
+
+
+
 
     </Grid>
 

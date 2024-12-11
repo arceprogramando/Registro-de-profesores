@@ -224,7 +224,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Resource Include="Images\cross_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\delete_icon.png" />
+    <Resource Include="Images\edit_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\utn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\trash_png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sim1f.png" />
+    <Resource Include="Images\sim2f.png" />
+    <Resource Include="Images\sims.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
