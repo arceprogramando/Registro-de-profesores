@@ -8,7 +8,7 @@
              xmlns:utilities="clr-namespace:TP2_GN.Utilities"
              mc:Ignorable="d"
              d:DesignHeight="600" d:DesignWidth="622">
-    
+
     <UserControl.Resources>
         <viewmodels:ProfesorViewModel x:Key="Profesores"/>
     </UserControl.Resources>
@@ -34,7 +34,7 @@
                    Foreground="#000000"
                    Padding="30,20"
                    TextAlignment="Center"/>
-        
+
         <Border Name="Form"
                 Grid.Column="0"
                 Grid.Row="1"
@@ -44,41 +44,34 @@
                 BorderBrush="DarkSlateBlue"
                 Padding="30"
                 MaxWidth="780" Grid.ColumnSpan="2">
+
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Auto">
                 <StackPanel>
-                   
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <StackPanel Grid.Column="0"
+
+                    <StackPanel Grid.Column="0"
                                     VerticalAlignment="Top"
                                     HorizontalAlignment="Center">
-                            <Label Content="Nombre/s"/>
-                            <TextBox x:Name="txtNombre"
-                                     MaxLength="50"
-                                     Padding="4"
-                                     Text="{Binding Profesor.Nombre, UpdateSourceTrigger=PropertyChanged}"
-                                     Width="160"
+                        <Label Content="Nombre/s"/>
+                        <TextBox x:Name="txtNombre"
+                                     Width="390"
                                      BorderBrush="#6497B1"
-                                     BorderThickness="2"/>
-                        </StackPanel>
-                        <StackPanel Grid.Column="1"
+                                     BorderThickness="2"
+                                     Padding="4"
+                                     Text="{Binding Profesor.Nombre, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1"
                                     VerticalAlignment="Top"
                                     HorizontalAlignment="Center">
-                            <Label Content="Apellido"/>
-                            <TextBox x:Name="txtApellido"
+                        <Label Content="Apellido"/>
+                        <TextBox x:Name="txtApellido"
                                      MaxLength="50"
-                                     Padding="4"
-                                     Text="{Binding Profesor.Apellido, UpdateSourceTrigger=PropertyChanged}"
-                                     Width="160"
-                                     VerticalAlignment="Center"
+                                     Width="390"
                                      BorderBrush="#6497B1"
-                                     BorderThickness="2"/>
-                        </StackPanel>
-                    </Grid>
+                                     BorderThickness="2"
+                                     Padding="4"
+                                     Text="{Binding Profesor.Apellido, UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Center">
@@ -93,42 +86,34 @@
                                  Padding="4"
                                  Text="{Binding Profesor.Domicilio, UpdateSourceTrigger=PropertyChanged}"/>
                     </StackPanel>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <StackPanel Grid.Column="0"
+                    <StackPanel Grid.Column="0"
                                     VerticalAlignment="Top"
                                     HorizontalAlignment="Center">
-                            <Label Content="Provincia"/>
-                            <ComboBox x:Name="cbxProvincia"
+                        <Label Content="Provincia"/>
+                        <ComboBox x:Name="cbxProvincia"
                                       HorizontalAlignment="Stretch"
-                                      VerticalAlignment="Center"
                                       BorderBrush="#6497B1"
                                       BorderThickness="2"
                                       Padding="4"
-                                      Width="160"
+                                      Width="388"
                                       Height="28"
                                       ItemsSource="{Binding Provincias}"
                                       SelectedIndex="-1"
                                       SelectedItem="{Binding Profesor.Provincia, UpdateSourceTrigger=PropertyChanged}"/>
-                        </StackPanel>
-                        <StackPanel Grid.Column="1"
+                    </StackPanel>
+                    <StackPanel Grid.Column="1"
                                     VerticalAlignment="Top"
                                     HorizontalAlignment="Center">
-                            <Label Content="Localidad"/>
-                            <TextBox x:Name="txtLocalidad"
+                        <Label Content="Localidad"/>
+                        <TextBox x:Name="txtLocalidad"
                                      HorizontalAlignment="Stretch"
                                      MaxLength="30"
-                                     VerticalAlignment="Center"
                                      BorderBrush="#6497B1"
                                      BorderThickness="2"
                                      Padding="4"
-                                     Width="160"
+                                     Width="389"
                                      Text="{Binding Profesor.Localidad, UpdateSourceTrigger=PropertyChanged}"/>
-                        </StackPanel>
-                    </Grid>
+                    </StackPanel>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Center">
@@ -211,10 +196,10 @@
                                      HorizontalContentAlignment="Center"
                                      Padding="5"
                                      utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding DiasClase, Mode=TwoWay}" />
-                        </StackPanel>
-                       
+                    </StackPanel>
+
                     <StackPanel x:Name="txtTurnos" HorizontalAlignment="Center" Width="390">
-                         <Label Content="Turno/s" />
+                        <Label Content="Turno/s" />
                         <ListBox ItemsSource="{Binding TurnosList}" Background="#d0e8ff"
                                      SelectionMode="Multiple"
                                      HorizontalContentAlignment="Center"
@@ -241,6 +226,6 @@
                    Foreground="Black"
                    Margin="20,10,20,10"/>
         </Border>
-        
+
     </Grid>
 </UserControl>
