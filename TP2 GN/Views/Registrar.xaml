@@ -56,9 +56,7 @@
                         <StackPanel Grid.Column="0"
                                     VerticalAlignment="Top"
                                     HorizontalAlignment="Center">
-                            <TextBlock Text="Nombre/s"
-                                       VerticalAlignment="Bottom"
-                                       Margin="0,0,0,8"/>
+                            <Label Content="Nombre/s"/>
                             <TextBox x:Name="txtNombre"
                                      MaxLength="50"
                                      Padding="4"
@@ -70,9 +68,7 @@
                         <StackPanel Grid.Column="1"
                                     VerticalAlignment="Top"
                                     HorizontalAlignment="Center">
-                            <TextBlock Text="Apellido"
-                                       VerticalAlignment="Bottom"
-                                       Margin="0,0,0,8"/>
+                            <Label Content="Apellido"/>
                             <TextBox x:Name="txtApellido"
                                      MaxLength="50"
                                      Padding="4"
@@ -115,7 +111,7 @@
                                       Width="160"
                                       Height="28"
                                       ItemsSource="{Binding Provincias}"
-                                      SelectedIndex="0"
+                                      SelectedIndex="-1"
                                       SelectedItem="{Binding Profesor.Provincia, UpdateSourceTrigger=PropertyChanged}"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1"
@@ -173,9 +169,10 @@
                                   BorderThickness="2"
                                   Padding="4"
                                   Height="28"
+                                  SelectedIndex="-1"
                                   ItemsSource="{Binding Categorias}"
                                   SelectedItem="{Binding Profesor.Categoria, Mode=TwoWay}"
-                                  SelectedIndex="0"/>
+/>
                     </StackPanel>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
@@ -202,21 +199,22 @@
                                   BorderThickness="2"
                                   Padding="4"
                                   Height="28"
-                                  SelectedIndex="0"
+                                  SelectedIndex="-1"
                                   ItemsSource="{Binding NivelesEnsenanza}"
                                   SelectedItem="{Binding Profesor.NivelEnsenanza,Mode=TwoWay}"/>
                     </StackPanel>
 
-                        <Label Content="Días que imparte clases" />
                     <StackPanel x:Name="txtDiasClase" HorizontalAlignment="Center" Width="390">
+                        <Label Content="Días que imparte clases" />
                         <ListBox ItemsSource="{Binding DiasSemanaList}" Background="#d0e8ff"
                                      SelectionMode="Multiple"
                                      HorizontalContentAlignment="Center"
                                      Padding="5"
                                      utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding DiasClase, Mode=TwoWay}" />
                         </StackPanel>
-                        <Label Content="Turno/s" />
+                       
                     <StackPanel x:Name="txtTurnos" HorizontalAlignment="Center" Width="390">
+                         <Label Content="Turno/s" />
                         <ListBox ItemsSource="{Binding TurnosList}" Background="#d0e8ff"
                                      SelectionMode="Multiple"
                                      HorizontalContentAlignment="Center"

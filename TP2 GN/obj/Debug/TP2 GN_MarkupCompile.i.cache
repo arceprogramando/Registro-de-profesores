@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\App.xaml
-71468270006
+8-364558479
 
-23621620853
+241952185326
 331062222132
-MainWindow.xaml;Styles\Button.xaml;Utilities\DataTemplate.xaml;Views\Eliminar.xaml;Views\Listar.xaml;Views\Modificar.xaml;Views\Registrar.xaml;
+MainWindow.xaml;Styles\Button.xaml;Utilities\DataTemplate.xaml;Views\Eliminar.xaml;Views\Home.xaml;Views\Listar.xaml;Views\Modificar.xaml;Views\Registrar.xaml;
 
-False
+True
 

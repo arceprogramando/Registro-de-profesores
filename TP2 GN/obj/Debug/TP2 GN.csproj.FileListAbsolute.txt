@@ -199,3 +199,5 @@ C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\TP2 GN.csproj.Cor
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\TP2 GN.csproj.Up2Date
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\TP2 GN.exe
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\TP2 GN.pdb
+C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Home.g.cs
+C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Home.baml

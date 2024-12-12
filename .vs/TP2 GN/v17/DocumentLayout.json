@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\romin\\desktop\\registro-de-profesores\\tp2 gn\\styles\\button.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\styles\\button.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\romin\\desktop\\registro-de-profesores\\tp2 gn\\views\\registrar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\registrar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\romin\\desktop\\registro-de-profesores\\tp2 gn\\views\\modificar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\modificar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\romin\\desktop\\registro-de-profesores\\tp2 gn\\views\\modificar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\views\\modificar.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|c:\\users\\romin\\desktop\\registro-de-profesores\\tp2 gn\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{16F72FB9-AB0E-4314-9C09-6700F0273FE7}|TP2 GN\\TP2 GN.csproj|solutionrelative:tp2 gn\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 367,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,14 +38,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Views\\Modificar.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\Views\\Modificar.xaml.cs",
+              "RelativeDocumentMoniker": "TP2 GN\\Views\\Modificar.xaml.cs",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\Views\\Modificar.xaml.cs",
+              "RelativeToolTip": "TP2 GN\\Views\\Modificar.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T11:56:09.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\App.config",
+              "RelativeDocumentMoniker": "TP2 GN\\App.config",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\App.config",
+              "RelativeToolTip": "TP2 GN\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-12-12T11:43:37.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Button.xaml",
-              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\Styles\\Button.xaml",
-              "RelativeDocumentMoniker": "TP2 GN\\Styles\\Button.xaml",
-              "ToolTip": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\Styles\\Button.xaml",
-              "RelativeToolTip": "TP2 GN\\Styles\\Button.xaml",
+              "Title": "Registrar.xaml",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\Views\\Registrar.xaml",
+              "RelativeDocumentMoniker": "TP2 GN\\Views\\Registrar.xaml",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\Views\\Registrar.xaml",
+              "RelativeToolTip": "TP2 GN\\Views\\Registrar.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-11T22:27:32.531Z",
+              "WhenOpened": "2024-12-12T11:36:20.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Modificar.xaml",
+              "DocumentMoniker": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\Views\\Modificar.xaml",
+              "RelativeDocumentMoniker": "TP2 GN\\Views\\Modificar.xaml",
+              "ToolTip": "C:\\Users\\romin\\Desktop\\Registro-de-profesores\\TP2 GN\\Views\\Modificar.xaml",
+              "RelativeToolTip": "TP2 GN\\Views\\Modificar.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-12T11:36:01.034Z",
               "EditorCaption": ""
             }
           ]

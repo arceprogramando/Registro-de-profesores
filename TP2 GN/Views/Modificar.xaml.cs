@@ -24,5 +24,6 @@ namespace TP2_GN.Views
         {
             InitializeComponent();
         }
+
     }
 }
