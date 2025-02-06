@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using TP2_GN.Models;
 using MySql.Data.MySqlClient;
 using TP2_GN.Utilities;
+using System.Windows.Media.Media3D;
 
 namespace TP2_GN.DataBase
 {
@@ -48,11 +49,27 @@ namespace TP2_GN.DataBase
                         Email = reader["EMAIL"] != DBNull.Value ? (string)reader["EMAIL"] : string.Empty,
                         Categoria = reader["CATEGORIA"] != DBNull.Value ? (string)reader["CATEGORIA"] : string.Empty,
                         NivelEnsenanza = reader["NIVEL_ENSENANZA"] != DBNull.Value ? (string)reader["NIVEL_ENSENANZA"] : string.Empty,
-                        Materia = reader["MATERIA"] != DBNull.Value ? (string)reader["MATERIA"] : string.Empty,
+
+                        Materias = reader["MATERIAS"] != DBNull.Value
+                        ? ((string)reader["MATERIAS"]).Split(',')
+                        .Select(materia =>
+                            {
+                                if (Enum.TryParse(materia.Trim(), out MateriasEnum resultado))
+                                {
+                                    return resultado;
+                                }
+                                else
+                                {
+                                    return (MateriasEnum?)null;
+                                }
+                            })
+                            .Where(materia => materia.HasValue)
+                            .Select(materia => materia.Value)
+                            .ToList() : new List<MateriasEnum>(),
 
                         // Parsear y convertir DiasClase a una lista de enums
                         DiasClase = reader["DIAS_CLASES"] != DBNull.Value
-                        ? ((string)reader["DIAS_CLASES"]).Split(',') 
+                        ? ((string)reader["DIAS_CLASES"]).Split(',')
                             .Select(dia =>
                             {
                                 // Intentar parsear cada día
@@ -68,10 +85,8 @@ namespace TP2_GN.DataBase
                             })
                             .Where(dia => dia.HasValue) // Filtrar valores nulos
                             .Select(dia => dia.Value) // Seleccionar sólo valores válidos
-                            .ToList()
-                        : new List<DiasSemanaEnum>(),
+                            .ToList() : new List<DiasSemanaEnum>(),
 
-                        // Parsear y convertir Turnos a una lista de enums
                         Turnos = reader["TURNOS"] != DBNull.Value
                         ? ((string)reader["TURNOS"]).Split(',')
                             .Select(turno =>
@@ -87,8 +102,7 @@ namespace TP2_GN.DataBase
                             })
                             .Where(turno => turno.HasValue)
                             .Select(turno => turno.Value)
-                            .ToList()
-                        : new List<TurnosEnum>()
+                            .ToList() : new List<TurnosEnum>()
 
 
                     });
@@ -104,9 +118,9 @@ namespace TP2_GN.DataBase
         internal void Add(ProfesorModel model)
         {
             string query = "INSERT INTO profesores (nombre, apellido, domicilio, localidad, provincia, nro_contacto," +
-                " email,categoria, nivel_ensenanza, materia, dias_clases, turnos)" +
+                " email,categoria, nivel_ensenanza, materias, dias_clases, turnos)" +
                 " VALUES(@Nombre, @Apellido, @Domicilio, @Localidad, @Provincia, @Nro_contacto," +
-                " @Email, @Categoria, @Nivel_ensenanza, @Materia, @Dias_clases, @Turnos)";
+                " @Email, @Categoria, @Nivel_ensenanza, @Materias, @Dias_clases, @Turnos)";
 
             try
             {
@@ -124,17 +138,21 @@ namespace TP2_GN.DataBase
                         cmd.Parameters.AddWithValue("@Email", model.Email ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@Categoria", model.Categoria ?? (object)DBNull.Value);
                         cmd.Parameters.AddWithValue("@Nivel_ensenanza", model.NivelEnsenanza ?? (object)DBNull.Value);
-                        cmd.Parameters.AddWithValue("@Materia", model.Materia ?? (object)DBNull.Value);
 
                         string diasClasesString = string.Join(",", model.DiasClase
-                                           .OrderBy(d => d) // Ordena la lista de enums
-                                           .Select(d => d.ToString())); // Convierte a string
+                                                        .OrderBy(d => d) // Ordena la lista de enums
+                                                        .Select(d => d.ToString())); // Convierte a string
 
                         cmd.Parameters.AddWithValue("@Dias_clases", diasClasesString);
 
+                        string materiasString = string.Join(",", model.Materias
+                                                      .OrderBy(m => m)
+                                                      .Select(m => m.ToString()));
+                        cmd.Parameters.AddWithValue("@Materias", materiasString);
+
                         string turnosString = string.Join(",", model.Turnos
-                                              .OrderBy(t => t)
-                                              .Select(t => t.ToString()));
+                                                    .OrderBy(t => t)
+                                                    .Select(t => t.ToString()));
                         cmd.Parameters.AddWithValue("@Turnos", turnosString);
 
                         connect.Open();
@@ -169,7 +187,7 @@ namespace TP2_GN.DataBase
         internal void Edit(ProfesorModel model)
         {
 
-            string query = "UPDATE profesores SET nombre=@Nombre, apellido=@Apellido, materia=@Materia WHERE id=@Id";
+            string query = "UPDATE profesores SET nombre=@Nombre, apellido=@Apellido WHERE id=@Id";
 
             using (MySqlConnection connect = new MySqlConnection(Connection))
             {
@@ -179,7 +197,6 @@ namespace TP2_GN.DataBase
                 cmd.Parameters.AddWithValue("@Id", model.Id);
                 cmd.Parameters.AddWithValue("@Nombre", model.Nombre);
                 cmd.Parameters.AddWithValue("@Apellido", model.Apellido);
-                cmd.Parameters.AddWithValue("@Materia", model.Materia);
 
                 cmd.ExecuteNonQuery();
                 connect.Close();

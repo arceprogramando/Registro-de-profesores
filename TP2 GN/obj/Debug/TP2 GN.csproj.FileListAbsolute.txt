@@ -178,6 +178,7 @@ C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\TP2 GN.csproj.Ass
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Styles\Button.baml
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\MainWindow.g.cs
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Eliminar.g.cs
+C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Home.g.cs
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Listar.g.cs
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Modificar.g.cs
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Registrar.g.cs
@@ -189,6 +190,7 @@ C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\App.baml
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\MainWindow.baml
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Utilities\DataTemplate.baml
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Eliminar.baml
+C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Home.baml
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Listar.baml
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Modificar.baml
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Registrar.baml
@@ -199,5 +201,3 @@ C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\TP2 GN.csproj.Cor
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\TP2 GN.csproj.Up2Date
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\TP2 GN.exe
 C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\TP2 GN.pdb
-C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Home.g.cs
-C:\Users\romin\Desktop\Registro-de-profesores\TP2 GN\obj\Debug\Views\Home.baml

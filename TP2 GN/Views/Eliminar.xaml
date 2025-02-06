@@ -63,8 +63,8 @@
                                     <TextBlock Text=" "/>
                                     <TextBlock Text="{Binding Apellido}"/>
                                     <TextBlock Text=" | "/>
-                                    <TextBlock Text=" Materia: "/>
-                                    <TextBlock Text="{Binding Materia}"/>
+                                    <TextBlock Text=" Materia/s: "/>
+                                    <TextBlock Text="{Binding Materias}"/>
                                     <TextBlock Text=" - Email: "/>
                                     <TextBlock Text="{Binding Email}"/>
                                     <TextBlock Text=" "/>

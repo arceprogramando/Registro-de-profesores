@@ -126,7 +126,9 @@
     <Compile Include="DataBase\DB.cs" />
     <Compile Include="Utilities\Btn.cs" />
     <Compile Include="Utilities\DiasSemanaEnum.cs" />
+    <Compile Include="Utilities\EnumDescriptionConverter.cs" />
     <Compile Include="Utilities\ListBoxSelectedItemsBehavior.cs" />
+    <Compile Include="Utilities\MateriasEnum.cs" />
     <Compile Include="Utilities\TurnosEnum.cs" />
     <Compile Include="ViewModels\EliminarVM.cs" />
     <Compile Include="ViewModels\ListarVM.cs" />

@@ -20,11 +20,9 @@ namespace TP2_GN.Models
         private string _email;
         private string _categoria;
         private string _nivelEnsenanza;
-        private string _materia;
+        private List<MateriasEnum> _materias;
         private List<DiasSemanaEnum> _diasClase;
         private List<TurnosEnum> _turnos;
-        private int _cantidadHoras;
-        private decimal _valorHoraCatedra;
 
         public int Id
         {
@@ -43,7 +41,7 @@ namespace TP2_GN.Models
             {
                 if (!string.IsNullOrWhiteSpace(value))
                     _nombre = value;
-                    OnPropertyChanged(nameof(Nombre));
+                OnPropertyChanged(nameof(Nombre));
             }
         }
 
@@ -54,7 +52,7 @@ namespace TP2_GN.Models
             {
                 if (!string.IsNullOrWhiteSpace(value))
                     _apellido = value;
-                    OnPropertyChanged(nameof(Apellido));
+                OnPropertyChanged(nameof(Apellido));
             }
         }
 
@@ -129,7 +127,7 @@ namespace TP2_GN.Models
                 if (!string.IsNullOrWhiteSpace(value))
                     _categoria = value;
                 else
-                    _categoria = string.Empty;  
+                    _categoria = string.Empty;
                 OnPropertyChanged(nameof(Categoria));
             }
         }
@@ -146,16 +144,13 @@ namespace TP2_GN.Models
                 OnPropertyChanged(nameof(NivelEnsenanza));
             }
         }
-        public string Materia
+        public List<MateriasEnum> Materias
         {
-            get => _materia;
+            get => _materias;
             set
             {
-                if (!string.IsNullOrWhiteSpace(value))
-                    _materia = value;
-                else
-                    _materia = string.Empty;
-                OnPropertyChanged(nameof(Materia));
+                _materias = value; // Asigna directamente, permitiendo que pueda ser nulo o vacío
+                OnPropertyChanged(nameof(Materias)); // Notifica el cambio siempre que se establezca un nuevo valor
             }
         }
         public List<DiasSemanaEnum> DiasClase
@@ -178,31 +173,6 @@ namespace TP2_GN.Models
             }
         }
 
-        public int CantidadHoras
-        {
-            get => _cantidadHoras;
-            set
-            {
-                if (value >= 0)
-                    _cantidadHoras = value;
-                else
-                    throw new ArgumentException("La cantidad de horas debe ser positiva.");
-                OnPropertyChanged(nameof(CantidadHoras));
-            }
-        }
-
-        public decimal ValorHoraCatedra
-        {
-            get => _valorHoraCatedra;
-            set
-            {
-                if (value >= 0)
-                    _valorHoraCatedra = value;
-                else
-                    throw new ArgumentException("El valor por hora cátedra debe ser positivo.");
-                OnPropertyChanged(nameof(ValorHoraCatedra));
-            }
-        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -210,21 +180,18 @@ namespace TP2_GN.Models
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         // Constructor opcional
         public ProfesorModel()
         {
             DiasClase = new List<DiasSemanaEnum>(); // Inicializa la lista
             Turnos = new List<TurnosEnum>();
+            Materias = new List<MateriasEnum>();
         }
 
-        public bool TurnoManana { get; set; }
-        public bool TurnoTarde { get; set; }
-        public bool TurnoNoche { get; set; }
-
         public ProfesorModel(int id, string nombre, string apellido, string domicilio, string localidad, string provincia,
-                        string nroCelular, string email, string categoria, string nivelEnsenanza, 
-                        string materia, List<DiasSemanaEnum> diasClase, List<TurnosEnum> turnos, 
-                        int cantidadHoras, decimal valorHoraCatedra) : this()
+                        string nroCelular, string email, string categoria, string nivelEnsenanza,
+                        List<MateriasEnum> materias, List<DiasSemanaEnum> diasClase, List<TurnosEnum> turnos) : this()
         {
             Id = id;
             Nombre = nombre;
@@ -236,16 +203,14 @@ namespace TP2_GN.Models
             Email = email;
             Categoria = categoria;
             NivelEnsenanza = nivelEnsenanza;
-            Materia = materia;
+            Materias = materias;
             DiasClase = diasClase;
             Turnos = turnos;
-            CantidadHoras = cantidadHoras;
-            ValorHoraCatedra = valorHoraCatedra;
         }
 
         public override string ToString()
         {
-            return $"{Nombre} {Apellido} - Materia: {Materia} - {NivelEnsenanza}";
+            return $"{Nombre} {Apellido} - Materia/s: {Materias} - {NivelEnsenanza}";
         }
     }
 }

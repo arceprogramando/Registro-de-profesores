@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media.Media3D;
 using TP2_GN.Commands;
 using TP2_GN.DataBase;
 using TP2_GN.Models;
@@ -19,13 +21,16 @@ namespace TP2_GN.ViewModels
     {
 
         private readonly DB dataBase;
+        private ProfesorModel _profesor;
         private ObservableCollection<ProfesorModel> _profesores;
         private ObservableCollection<string> _provincias;
         private ObservableCollection<string> _categorias;
         private ObservableCollection<string> _nivelesEnsenanza;
-        private ProfesorModel _profesor;
         public List<DiasSemanaEnum> DiasSemanaList { get; } = Enum.GetValues(typeof(DiasSemanaEnum)).Cast<DiasSemanaEnum>().ToList();
         public List<TurnosEnum> TurnosList { get; } = Enum.GetValues(typeof(TurnosEnum)).Cast<TurnosEnum>().ToList();
+
+        public List<MateriasEnum> MateriasList { get; } = Enum.GetValues(typeof(MateriasEnum)).Cast<MateriasEnum>().ToList();
+
 
         // Comandos para agregar, listar, eliminar y actualizar profesores
         public ICommand AgregarCommand { get; }
@@ -35,7 +40,6 @@ namespace TP2_GN.ViewModels
 
         public ProfesorViewModel()
         {
-
             // Instancias necesarias
             dataBase = new DB();
             AgregarCommand = new RelayCommand(Agregar);
@@ -103,17 +107,9 @@ namespace TP2_GN.ViewModels
 
         private bool IsValidProfesor(ProfesorModel profesor)
         {
-            if (profesor == null) return false;
-
-            if (string.IsNullOrWhiteSpace(profesor.Nombre))
+            if (string.IsNullOrWhiteSpace(profesor.Nombre) || profesor == null)
             {
-                MessageBox.Show("El campo 'Nombre' es obligatorio.");
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(profesor.Apellido))
-            {
-                MessageBox.Show("El campo 'Apellido' es obligatorio.");
+                MessageBox.Show("Debes llenar los campos obligatorios.");
                 return false;
             }
 
@@ -197,15 +193,36 @@ namespace TP2_GN.ViewModels
             }
         }
 
-        public string Materia
+        public List<MateriasEnum> Materias
         {
-            get => Profesor.Materia;
+            get => Profesor.Materias;
             set
             {
-                if (Profesor.Materia != value)
+                if (Profesor?.Materias != value)
                 {
-                    Profesor.Materia = value;
-                    OnPropertyChanged(nameof(Materia));
+                    Profesor.Materias = value;
+                    OnPropertyChanged(nameof(Materias));
+                }
+            }
+        }
+
+        // Métodos para añadir o eliminar un item cuando se selecciona o deselecciona
+        public void ToggleMateriaSeleccionada(MateriasEnum materia, bool isSelected)
+        {
+            if(isSelected)
+            {
+                if (!Materias.Contains(materia))
+                {
+                    Materias.Add(materia);
+                    OnPropertyChanged(nameof(Materias));
+                }
+                else
+                {
+                    if (Materias.Contains(materia))
+                    {
+                        Materias.Remove(materia);
+                        OnPropertyChanged(nameof(Materias));
+                    }
                 }
             }
         }
@@ -223,7 +240,6 @@ namespace TP2_GN.ViewModels
             }
         }
 
-        // Métodos para añadir o eliminar un item cuando se selecciona o deselecciona
         public void ToggleDiaSeleccionado(DiasSemanaEnum dia, bool isSelected)
         {
             if (isSelected)
@@ -348,7 +364,7 @@ namespace TP2_GN.ViewModels
             set
             {
                 _nivelesEnsenanza = value;
-                OnPropertyChanged(nameof(_nivelesEnsenanza));
+                OnPropertyChanged(nameof(NivelesEnsenanza));
             }
         }
 
@@ -361,7 +377,7 @@ namespace TP2_GN.ViewModels
                     "Primario",
                     "Inicial"
                 };
-        }
+        } 
 
         // Método para eliminar el profesor seleccionado
         private void Eliminar(object profesor)
@@ -379,20 +395,6 @@ namespace TP2_GN.ViewModels
             }
         }
 
-        /*
 
-        // Método para actualizar la información de un profesor
-        private void Actualizar()
-        {
-            dataBase.Edit(Profesor);
-            Profesores = dataBase.Get(); // Refresca la lista
-            OnPropertyChanged(nameof(Profesores)); // Notifica el cambio
-        }
-
-        // Validación de eliminación y actualización
-        private bool CanEliminarProfesor() => Profesor != null && Profesor.Id > 0;
-        private bool CanActualizarProfesor() => Profesor != null && Profesor.Id > 0;
-
-        */
     }
 }

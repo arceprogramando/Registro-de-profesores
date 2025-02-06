@@ -11,6 +11,7 @@
 
     <UserControl.Resources>
         <viewmodels:ProfesorViewModel x:Key="Profesores"/>
+        <utilities:EnumDescriptionConverter x:Key="EnumDescriptionConverter"/>
     </UserControl.Resources>
 
     <Grid DataContext="{Binding Source={StaticResource Profesores}}" Background="#6e9aee">
@@ -58,7 +59,7 @@
                                      BorderBrush="#6497B1"
                                      BorderThickness="2"
                                      Padding="4"
-                                     Text="{Binding Profesor.Nombre, UpdateSourceTrigger=PropertyChanged}"/>
+                                     Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}"/>
                     </StackPanel>
                     <StackPanel Grid.Column="1"
                                     VerticalAlignment="Top"
@@ -70,7 +71,7 @@
                                      BorderBrush="#6497B1"
                                      BorderThickness="2"
                                      Padding="4"
-                                     Text="{Binding Profesor.Apellido, UpdateSourceTrigger=PropertyChanged}"/>
+                                     Text="{Binding Apellido, UpdateSourceTrigger=PropertyChanged}"/>
                     </StackPanel>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
@@ -156,21 +157,7 @@
                                   Height="28"
                                   SelectedIndex="-1"
                                   ItemsSource="{Binding Categorias}"
-                                  SelectedItem="{Binding Profesor.Categoria, Mode=TwoWay}"
-/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="0"
-                                VerticalAlignment="Top"
-                                HorizontalAlignment="Center">
-                        <Label Content="Materias que dicta"/>
-                        <TextBox x:Name="txtMateria"
-                                 HorizontalAlignment="Stretch"
-                                 Width="390"
-                                 VerticalAlignment="Center"
-                                 BorderBrush="#6497B1"
-                                 BorderThickness="2"
-                                 Padding="4"
-                                 Text="{Binding Profesor.Materia, UpdateSourceTrigger=PropertyChanged}"/>
+                                  SelectedItem="{Binding Profesor.Categoria, Mode=TwoWay}"/>
                     </StackPanel>
                     <StackPanel Grid.Column="0"
                                 VerticalAlignment="Top"
@@ -187,6 +174,22 @@
                                   SelectedIndex="-1"
                                   ItemsSource="{Binding NivelesEnsenanza}"
                                   SelectedItem="{Binding Profesor.NivelEnsenanza,Mode=TwoWay}"/>
+                    </StackPanel>
+
+                    <StackPanel x:Name="txtMaterias" HorizontalAlignment="Center" Width="390">
+                        <Label Content="Materia/s" />
+                        <ListBox ItemsSource="{Binding MateriasList}"
+                                 SelectionMode="Multiple"
+                                 Background="#d0e8ff"
+                                 Padding="5"
+                                 HorizontalContentAlignment="Center"
+                                 utilities:ListBoxSelectedItemsBehavior.SelectedItems="{Binding Materias, Mode=TwoWay}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumDescriptionConverter}}"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
                     </StackPanel>
 
                     <StackPanel x:Name="txtDiasClase" HorizontalAlignment="Center" Width="390">
